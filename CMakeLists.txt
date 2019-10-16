@@ -10,7 +10,7 @@ find_package( Qt5Core REQUIRED )
 find_package( Qt5Gui REQUIRED )
 find_package(Qt5Sql REQUIRED)
 
-add_executable(CEvsEstudiantes main.cpp estructuras/List.cpp estructuras/List.h estructuras/Node.cpp estructuras/Node.h grafica/Game.cpp grafica/Game.h grafica/Player.cpp grafica/Player.h grafica/Bullet.cpp grafica/Bullet.h)
+add_executable(CEvsEstudiantes main.cpp estructuras/List.cpp estructuras/List.h estructuras/Node.cpp estructuras/Node.h grafica/Game.cpp grafica/Game.h grafica/Bullet.cpp grafica/Bullet.h)
 
 target_link_libraries(CEvsEstudiantes Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Sql )
 

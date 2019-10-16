@@ -5,15 +5,19 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QtWidgets/QPushButton>
-#include "Player.h"
+#include <iostream>
+
+using namespace std;
 
 class Game: public QGraphicsView{
+
 public:
     Game(QWidget * parent=0);
 
     QGraphicsScene * scene;
-    Player * player;
     ~Game();
+public slots:
+    int btn(int but);
 private:
     QPushButton* btnA1;
     QPushButton* btnA2;

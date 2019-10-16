@@ -1,7 +1,6 @@
 #include "Game.h"
 #include <QTimer>
 #include <QGraphicsTextItem>
-#include <QFont>
 
 Game::Game(QWidget *parent){
     // create the scene
@@ -21,420 +20,420 @@ Game::Game(QWidget *parent){
 
     btnA2 = new QPushButton("", this);
     btnA2->setGeometry(90, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA3 = new QPushButton("", this);
     btnA3->setGeometry(180, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA4 = new QPushButton("", this);
     btnA4->setGeometry(270, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA5 = new QPushButton("", this);
     btnA5->setGeometry(360, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA6 = new QPushButton("", this);
     btnA6->setGeometry(450, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA7 = new QPushButton("", this);
     btnA7->setGeometry(540, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA8 = new QPushButton("", this);
     btnA8->setGeometry(630, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA9 = new QPushButton("", this);
     btnA9->setGeometry(720, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnA10 = new QPushButton("", this);
     btnA10->setGeometry(810, 0+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnA10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
     btnB1 = new QPushButton("", this);
     btnB1->setGeometry(0, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB2 = new QPushButton("", this);
     btnB2->setGeometry(90, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB3 = new QPushButton("", this);
     btnB3->setGeometry(180, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB4 = new QPushButton("", this);
     btnB4->setGeometry(270, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB5 = new QPushButton("", this);
     btnB5->setGeometry(360, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB6 = new QPushButton("", this);
     btnB6->setGeometry(450, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB7 = new QPushButton("", this);
     btnB7->setGeometry(540, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB8 = new QPushButton("", this);
     btnB8->setGeometry(630, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB9 = new QPushButton("", this);
     btnB9->setGeometry(720, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnB10 = new QPushButton("", this);
     btnB10->setGeometry(810, 90+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnB10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
     btnC1 = new QPushButton("", this);
     btnC1->setGeometry(0, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnAC1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC2 = new QPushButton("", this);
     btnC2->setGeometry(90, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC3 = new QPushButton("", this);
     btnC3->setGeometry(180, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC4 = new QPushButton("", this);
     btnC4->setGeometry(270, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC5 = new QPushButton("", this);
     btnC5->setGeometry(360, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC6 = new QPushButton("", this);
     btnC6->setGeometry(450, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC7 = new QPushButton("", this);
     btnC7->setGeometry(540, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC8 = new QPushButton("", this);
     btnC8->setGeometry(630, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC9 = new QPushButton("", this);
     btnC9->setGeometry(720, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnC10 = new QPushButton("", this);
     btnC10->setGeometry(810, 180+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnC10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
     btnD1 = new QPushButton("", this);
     btnD1->setGeometry(0, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD2 = new QPushButton("", this);
     btnD2->setGeometry(90, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD3 = new QPushButton("", this);
     btnD3->setGeometry(180, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD4 = new QPushButton("", this);
     btnD4->setGeometry(270, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD5 = new QPushButton("", this);
     btnD5->setGeometry(360, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD6 = new QPushButton("", this);
     btnD6->setGeometry(450, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD7 = new QPushButton("", this);
     btnD7->setGeometry(540, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD8 = new QPushButton("", this);
     btnD8->setGeometry(630, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD9 = new QPushButton("", this);
     btnD9->setGeometry(720, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnD10 = new QPushButton("", this);
     btnD10->setGeometry(810, 270+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnD10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
     btnE1 = new QPushButton("", this);
     btnE1->setGeometry(0, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE2 = new QPushButton("", this);
     btnE2->setGeometry(90, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE3 = new QPushButton("", this);
     btnE3->setGeometry(180, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE4 = new QPushButton("", this);
     btnE4->setGeometry(270, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE5 = new QPushButton("", this);
     btnE5->setGeometry(360, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE6 = new QPushButton("", this);
     btnE6->setGeometry(450, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE7 = new QPushButton("", this);
     btnE7->setGeometry(540, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE8 = new QPushButton("", this);
     btnE8->setGeometry(630, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE9 = new QPushButton("", this);
     btnE9->setGeometry(720, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnE10 = new QPushButton("", this);
     btnE10->setGeometry(810, 360+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnE10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
     btnF1 = new QPushButton("", this);
     btnF1->setGeometry(0, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF2 = new QPushButton("", this);
     btnF2->setGeometry(90, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF3 = new QPushButton("", this);
     btnF3->setGeometry(180, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF4 = new QPushButton("", this);
     btnF4->setGeometry(270, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF5 = new QPushButton("", this);
     btnF5->setGeometry(360, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF6 = new QPushButton("", this);
     btnF6->setGeometry(450, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF7 = new QPushButton("", this);
     btnF7->setGeometry(540, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF8 = new QPushButton("", this);
     btnF8->setGeometry(630, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF9 = new QPushButton("", this);
     btnF9->setGeometry(720, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnF10 = new QPushButton("", this);
     btnF10->setGeometry(810, 450+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnF10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
     btnG1 = new QPushButton("", this);
     btnG1->setGeometry(0, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG2 = new QPushButton("", this);
     btnG2->setGeometry(90, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG3 = new QPushButton("", this);
     btnG3->setGeometry(180, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG4 = new QPushButton("", this);
     btnG4->setGeometry(270, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG5 = new QPushButton("", this);
     btnG5->setGeometry(360, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG6 = new QPushButton("", this);
     btnG6->setGeometry(450, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG7 = new QPushButton("", this);
     btnG7->setGeometry(540, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG8 = new QPushButton("", this);
     btnG8->setGeometry(630, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG9 = new QPushButton("", this);
     btnG9->setGeometry(720, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnG10 = new QPushButton("", this);
     btnG10->setGeometry(810, 540+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnG10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
 
     btnH1 = new QPushButton("", this);
     btnH1->setGeometry(0, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH2 = new QPushButton("", this);
     btnH2->setGeometry(90, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH3 = new QPushButton("", this);
     btnH3->setGeometry(180, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH4 = new QPushButton("", this);
     btnH4->setGeometry(270, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH5 = new QPushButton("", this);
     btnH5->setGeometry(360, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH6 = new QPushButton("", this);
     btnH6->setGeometry(450, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH7 = new QPushButton("", this);
     btnH7->setGeometry(540, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH8 = new QPushButton("", this);
     btnH8->setGeometry(630, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH9 = new QPushButton("", this);
     btnH9->setGeometry(720, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnH10 = new QPushButton("", this);
     btnH10->setGeometry(810, 630+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnH10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
 
     btnI1 = new QPushButton("", this);
     btnI1->setGeometry(0, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI2 = new QPushButton("", this);
     btnI2->setGeometry(90, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI3 = new QPushButton("", this);
     btnI3->setGeometry(180, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI4 = new QPushButton("", this);
     btnI4->setGeometry(270, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI5 = new QPushButton("", this);
     btnI5->setGeometry(360, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI6 = new QPushButton("", this);
     btnI6->setGeometry(450, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI7 = new QPushButton("", this);
     btnI7->setGeometry(540, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI8 = new QPushButton("", this);
     btnI8->setGeometry(630, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI9 = new QPushButton("", this);
     btnI9->setGeometry(720, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnI10 = new QPushButton("", this);
     btnI10->setGeometry(810, 720+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnI10 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
 
 
 
     btnJ1 = new QPushButton("", this);
     btnJ1->setGeometry(0, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ2 = new QPushButton("", this);
     btnJ2->setGeometry(90, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ2 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ3 = new QPushButton("", this);
     btnJ3->setGeometry(180, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ3 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ4 = new QPushButton("", this);
     btnJ4->setGeometry(270, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ4 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ5 = new QPushButton("", this);
     btnJ5->setGeometry(360, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ5 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ6 = new QPushButton("", this);
     btnJ6->setGeometry(450, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ6 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ7 = new QPushButton("", this);
     btnJ7->setGeometry(540, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ7 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ8 = new QPushButton("", this);
     btnJ8->setGeometry(630, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ8 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ9 = new QPushButton("", this);
     btnJ9->setGeometry(720, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    //connect(btnJ9 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
 
     btnJ10 = new QPushButton("", this);
     btnJ10->setGeometry(810, 810+gapy, 90 , 90);
-    //connect(btnA1 ,&QPushButton::clicked, this, &Ventana::handleBtn1);
+    connect(btnJ10, &QPushButton::clicked, this, &Game::btn);
 
     QPixmap pix1("/home/yenus/CLionProjects/CEvsEstudiantes/art/block.png");
     QPixmap pix = pix1.scaled(90, 90, Qt::IgnoreAspectRatio);
@@ -674,4 +673,9 @@ Game::Game(QWidget *parent){
 
 Game::~Game() {
 
+}
+
+int Game::btn(int but) {
+    cout<<"hola: "<<but<<endl;
+    return 0;
 }
