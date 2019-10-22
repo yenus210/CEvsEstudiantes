@@ -12,19 +12,22 @@ using namespace std;
 class Zombie: public QObject, public QGraphicsPixmapItem{
 public:
     Zombie(int zombie, QGraphicsItem * parent=0);
-
+    void setRuta(QList<string> lista );
 private:
     int move();
-    int zombienum=1;
-    int cont=1;
+    int destinoX;
+    int destinoY;
+
+
     string rutaOgro="/home/yenus/CLionProjects/CEvsEstudiantes/art/ogro";
     string rutaDark="/home/yenus/CLionProjects/CEvsEstudiantes/art/dark";
     string rutaArpia="/home/yenus/CLionProjects/CEvsEstudiantes/art/arpia";
     string rutaMerc="/home/yenus/CLionProjects/CEvsEstudiantes/art/mercenario";
-
 public:
-    int getZombienum() const;
-    void setZombienum(int zombienum);
+    int zombienum=1;
+    int cont=1;
+
+
 };
 
 

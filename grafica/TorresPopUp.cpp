@@ -57,6 +57,7 @@ void TorresPopUp::handletorre1() {
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
+    C->ocupado=true;
     close();
 }
 
@@ -66,6 +67,7 @@ void TorresPopUp::handletorre2() {
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
+    C->ocupado=true;
     close();
 }
 
@@ -75,6 +77,7 @@ void TorresPopUp::handletorre3() {
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
+    C->ocupado=true;
     close();
 }
 
@@ -84,6 +87,7 @@ void TorresPopUp::handletorre4() {
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
+    C->ocupado=true;
     close();
 }
 

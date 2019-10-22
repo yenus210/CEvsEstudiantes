@@ -16,11 +16,13 @@ public:
 
     QGraphicsScene* scene;
     ~Game();
-
+    QList<Cuadro *> buttonsL;
+    QList<QGraphicsItem *> zombieL;
 
 
 private:
-    Cuadro* btnAct;
+    void detectZombie();
+
     Cuadro* btnA1;
     Cuadro* btnA2;
     Cuadro* btnA3;
