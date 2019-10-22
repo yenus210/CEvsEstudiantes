@@ -6,6 +6,9 @@
 #include <QGraphicsScene>
 #include <QtWidgets/QPushButton>
 #include <iostream>
+#include "TorresPopUp.h"
+#include "Zombie.h"
+#include "Cuadro.h"
 
 using namespace std;
 
@@ -14,120 +17,123 @@ class Game: public QGraphicsView{
 public:
     Game(QWidget * parent=0);
 
-    QGraphicsScene * scene;
+    QGraphicsScene* scene;
     ~Game();
-public slots:
-    int btn(int but);
+
+
+
 private:
-    QPushButton* btnA1;
-    QPushButton* btnA2;
-    QPushButton* btnA3;
-    QPushButton* btnA4;
-    QPushButton* btnA5;
-    QPushButton* btnA6;
-    QPushButton* btnA7;
-    QPushButton* btnA8;
-    QPushButton* btnA9;
-    QPushButton* btnA10;
+    TorresPopUp *popUp=new TorresPopUp();
+    Cuadro* btnAct;
+    Cuadro* btnA1;
+    Cuadro* btnA2;
+    Cuadro* btnA3;
+    Cuadro* btnA4;
+    Cuadro* btnA5;
+    Cuadro* btnA6;
+    Cuadro* btnA7;
+    Cuadro* btnA8;
+    Cuadro* btnA9;
+    Cuadro* btnA10;
 
-    QPushButton* btnB1;
-    QPushButton* btnB2;
-    QPushButton* btnB3;
-    QPushButton* btnB4;
-    QPushButton* btnB5;
-    QPushButton* btnB6;
-    QPushButton* btnB7;
-    QPushButton* btnB8;
-    QPushButton* btnB9;
-    QPushButton* btnB10;
+    Cuadro* btnB1;
+    Cuadro* btnB2;
+    Cuadro* btnB3;
+    Cuadro* btnB4;
+    Cuadro* btnB5;
+    Cuadro* btnB6;
+    Cuadro* btnB7;
+    Cuadro* btnB8;
+    Cuadro* btnB9;
+    Cuadro* btnB10;
 
-    QPushButton* btnC1;
-    QPushButton* btnC2;
-    QPushButton* btnC3;
-    QPushButton* btnC4;
-    QPushButton* btnC5;
-    QPushButton* btnC6;
-    QPushButton* btnC7;
-    QPushButton* btnC8;
-    QPushButton* btnC9;
-    QPushButton* btnC10;
+    Cuadro* btnC1;
+    Cuadro* btnC2;
+    Cuadro* btnC3;
+    Cuadro* btnC4;
+    Cuadro* btnC5;
+    Cuadro* btnC6;
+    Cuadro* btnC7;
+    Cuadro* btnC8;
+    Cuadro* btnC9;
+    Cuadro* btnC10;
 
-    QPushButton* btnD1;
-    QPushButton* btnD2;
-    QPushButton* btnD3;
-    QPushButton* btnD4;
-    QPushButton* btnD5;
-    QPushButton* btnD6;
-    QPushButton* btnD7;
-    QPushButton* btnD8;
-    QPushButton* btnD9;
-    QPushButton* btnD10;
+    Cuadro* btnD1;
+    Cuadro* btnD2;
+    Cuadro* btnD3;
+    Cuadro* btnD4;
+    Cuadro* btnD5;
+    Cuadro* btnD6;
+    Cuadro* btnD7;
+    Cuadro* btnD8;
+    Cuadro* btnD9;
+    Cuadro* btnD10;
 
-    QPushButton* btnE1;
-    QPushButton* btnE2;
-    QPushButton* btnE3;
-    QPushButton* btnE4;
-    QPushButton* btnE5;
-    QPushButton* btnE6;
-    QPushButton* btnE7;
-    QPushButton* btnE8;
-    QPushButton* btnE9;
-    QPushButton* btnE10;
+    Cuadro* btnE1;
+    Cuadro* btnE2;
+    Cuadro* btnE3;
+    Cuadro* btnE4;
+    Cuadro* btnE5;
+    Cuadro* btnE6;
+    Cuadro* btnE7;
+    Cuadro* btnE8;
+    Cuadro* btnE9;
+    Cuadro* btnE10;
 
-    QPushButton* btnF1;
-    QPushButton* btnF2;
-    QPushButton* btnF3;
-    QPushButton* btnF4;
-    QPushButton* btnF5;
-    QPushButton* btnF6;
-    QPushButton* btnF7;
-    QPushButton* btnF8;
-    QPushButton* btnF9;
-    QPushButton* btnF10;
+    Cuadro* btnF1;
+    Cuadro* btnF2;
+    Cuadro* btnF3;
+    Cuadro* btnF4;
+    Cuadro* btnF5;
+    Cuadro* btnF6;
+    Cuadro* btnF7;
+    Cuadro* btnF8;
+    Cuadro* btnF9;
+    Cuadro* btnF10;
 
-    QPushButton* btnG1;
-    QPushButton* btnG2;
-    QPushButton* btnG3;
-    QPushButton* btnG4;
-    QPushButton* btnG5;
-    QPushButton* btnG6;
-    QPushButton* btnG7;
-    QPushButton* btnG8;
-    QPushButton* btnG9;
-    QPushButton* btnG10;
+    Cuadro* btnG1;
+    Cuadro* btnG2;
+    Cuadro* btnG3;
+    Cuadro* btnG4;
+    Cuadro* btnG5;
+    Cuadro* btnG6;
+    Cuadro* btnG7;
+    Cuadro* btnG8;
+    Cuadro* btnG9;
+    Cuadro* btnG10;
 
-    QPushButton* btnH1;
-    QPushButton* btnH2;
-    QPushButton* btnH3;
-    QPushButton* btnH4;
-    QPushButton* btnH5;
-    QPushButton* btnH6;
-    QPushButton* btnH7;
-    QPushButton* btnH8;
-    QPushButton* btnH9;
-    QPushButton* btnH10;
+    Cuadro* btnH1;
+    Cuadro* btnH2;
+    Cuadro* btnH3;
+    Cuadro* btnH4;
+    Cuadro* btnH5;
+    Cuadro* btnH6;
+    Cuadro* btnH7;
+    Cuadro* btnH8;
+    Cuadro* btnH9;
+    Cuadro* btnH10;
 
-    QPushButton* btnI1;
-    QPushButton* btnI2;
-    QPushButton* btnI3;
-    QPushButton* btnI4;
-    QPushButton* btnI5;
-    QPushButton* btnI6;
-    QPushButton* btnI7;
-    QPushButton* btnI8;
-    QPushButton* btnI9;
-    QPushButton* btnI10;
+    Cuadro* btnI1;
+    Cuadro* btnI2;
+    Cuadro* btnI3;
+    Cuadro* btnI4;
+    Cuadro* btnI5;
+    Cuadro* btnI6;
+    Cuadro* btnI7;
+    Cuadro* btnI8;
+    Cuadro* btnI9;
+    Cuadro* btnI10;
 
-    QPushButton* btnJ1;
-    QPushButton* btnJ2;
-    QPushButton* btnJ3;
-    QPushButton* btnJ4;
-    QPushButton* btnJ5;
-    QPushButton* btnJ6;
-    QPushButton* btnJ7;
-    QPushButton* btnJ8;
-    QPushButton* btnJ9;
-    QPushButton* btnJ10;
+    Cuadro* btnJ1;
+    Cuadro* btnJ2;
+    Cuadro* btnJ3;
+    Cuadro* btnJ4;
+    Cuadro* btnJ5;
+    Cuadro* btnJ6;
+    Cuadro* btnJ7;
+    Cuadro* btnJ8;
+    Cuadro* btnJ9;
+    Cuadro* btnJ10;
 
 };
 
