@@ -1,10 +1,8 @@
-//
 // Created by yenus on 20/10/19.
-//
 
 #include "Cuadro.h"
 #include "Game.h"
-#include <QTimer>
+#include "TorresPopUp.h"
 
 extern Game * game;
 
@@ -13,12 +11,12 @@ Cuadro::Cuadro(QGraphicsItem *parent) {
 }
 
 void Cuadro::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-
+    auto* popUp=new TorresPopUp();
     popUp->show();
-    string ruta =popUp->actCasilla();
-    QPixmap pixa(ruta.c_str());
-    QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-    setPixmap(pixb);
-    popUp->close();
+    popUp->setC(this);
+
+
+
+
 }
 

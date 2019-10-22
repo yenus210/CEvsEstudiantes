@@ -14,7 +14,7 @@ Zombie::Zombie(int zombie, QGraphicsItem *parent): QObject(), QGraphicsPixmapIte
     zombienum=zombie;
     //set random x position
     int random_number = rand() % 810;
-    setPos(random_number,100);
+    setPos(random_number,950);
 
     // drew the rect
     switch(zombienum) {
@@ -107,10 +107,10 @@ int Zombie::move(){
             }
             break;
     }
-    setPos(x(),y()-2);
+    setPos(x(),y()-7);
 
     // destroy enemy when it goes out of the screen
-    if (pos().y() < 0){
+    if (pos().y() < 50){
         //decrease the health
         //game->health->decrease();
         scene()->removeItem(this);

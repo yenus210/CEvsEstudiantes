@@ -1,6 +1,5 @@
 #include "Game.h"
-#include <QTimer>
-#include <QGraphicsTextItem>
+
 
 Game::Game(QWidget *parent){
     // create the scene
@@ -244,95 +243,185 @@ Game::Game(QWidget *parent){
     btnD10->setPos(810,gapy+270);
     scene->addItem(btnD10);
 
-    btnC1->setPos(0,gapy+270);
-    scene->addItem(btnC1);
+    btnE1->setPos(0,gapy+360);
+    scene->addItem(btnE1);
 
-    btnC2->setPos(90,gapy+270);
-    scene->addItem(btnC2);
+    btnE2->setPos(90,gapy+360);
+    scene->addItem(btnE2);
 
-    btnC3->setPos(180,gapy+270);
-    scene->addItem(btnC3);
+    btnE3->setPos(180,gapy+360);
+    scene->addItem(btnE3);
 
-    btnC4->setPos(270,gapy+270);
-    scene->addItem(btnC4);
+    btnE4->setPos(270,gapy+360);
+    scene->addItem(btnE4);
 
-    btnC5->setPos(360,gapy+270);
-    scene->addItem(btnC5);
+    btnE5->setPos(360,gapy+360);
+    scene->addItem(btnE5);
 
-    btnC6->setPos(450,gapy+270);
-    scene->addItem(btnC6);
+    btnE6->setPos(450,gapy+360);
+    scene->addItem(btnE6);
 
-    btnC7->setPos(540,gapy+270);
-    scene->addItem(btnC7);
+    btnE7->setPos(540,gapy+360);
+    scene->addItem(btnE7);
 
-    btnC8->setPos(630,gapy+270);
-    scene->addItem(btnC8);
+    btnE8->setPos(630,gapy+360);
+    scene->addItem(btnE8);
 
-    btnC9->setPos(720,gapy+270);
-    scene->addItem(btnC9);
+    btnE9->setPos(720,gapy+360);
+    scene->addItem(btnE9);
 
-    btnC10->setPos(810,gapy+270);
-    scene->addItem(btnC10);
+    btnE10->setPos(810,gapy+360);
+    scene->addItem(btnE10);
 
-    btnD1->setPos(0,gapy+270);
-    scene->addItem(btnD1);
+    btnF1->setPos(0,gapy+450);
+    scene->addItem(btnF1);
 
-    btnD2->setPos(90,gapy+270);
-    scene->addItem(btnD2);
+    btnF2->setPos(90,gapy+450);
+    scene->addItem(btnF2);
 
-    btnD3->setPos(180,gapy+270);
-    scene->addItem(btnD3);
+    btnF3->setPos(180,gapy+450);
+    scene->addItem(btnF3);
 
-    btnD4->setPos(270,gapy+270);
-    scene->addItem(btnD4);
+    btnF4->setPos(270,gapy+450);
+    scene->addItem(btnF4);
 
-    btnD5->setPos(360,gapy+270);
-    scene->addItem(btnD5);
+    btnF5->setPos(360,gapy+450);
+    scene->addItem(btnF5);
 
-    btnD6->setPos(450,gapy+270);
-    scene->addItem(btnD6);
+    btnF6->setPos(450,gapy+450);
+    scene->addItem(btnF6);
 
-    btnD7->setPos(540,gapy+270);
-    scene->addItem(btnD7);
+    btnF7->setPos(540,gapy+450);
+    scene->addItem(btnF7);
 
-    btnD8->setPos(630,gapy+270);
-    scene->addItem(btnD8);
+    btnF8->setPos(630,gapy+450);
+    scene->addItem(btnF8);
 
-    btnD9->setPos(720,gapy+270);
-    scene->addItem(btnD9);
+    btnF9->setPos(720,gapy+450);
+    scene->addItem(btnF9);
 
-    btnD10->setPos(810,gapy+270);
-    scene->addItem(btnD10);
+    btnF10->setPos(810,gapy+450);
+    scene->addItem(btnF10);
 
-    btnD1->setPos(0,gapy+270);
-    scene->addItem(btnD1);
+    btnG1->setPos(0,gapy+540);
+    scene->addItem(btnG1);
 
-    btnD2->setPos(90,gapy+270);
-    scene->addItem(btnD2);
+    btnG2->setPos(90,gapy+540);
+    scene->addItem(btnG2);
 
-    btnD3->setPos(180,gapy+270);
-    scene->addItem(btnD3);
+    btnG3->setPos(180,gapy+540);
+    scene->addItem(btnG3);
 
-    btnD4->setPos(270,gapy+270);
-    scene->addItem(btnD4);
+    btnG4->setPos(270,gapy+540);
+    scene->addItem(btnG4);
 
-    btnD5->setPos(360,gapy+270);
-    scene->addItem(btnD5);
+    btnG5->setPos(360,gapy+540);
+    scene->addItem(btnG5);
 
-    btnD6->setPos(450,gapy+270);
-    scene->addItem(btnD6);
+    btnG6->setPos(450,gapy+540);
+    scene->addItem(btnG6);
 
-    btnD7->setPos(540,gapy+270);
-    scene->addItem(btnD7);
+    btnG7->setPos(540,gapy+540);
+    scene->addItem(btnG7);
 
-    btnD8->setPos(630,gapy+270);
-    scene->addItem(btnD8);
+    btnG8->setPos(630,gapy+540);
+    scene->addItem(btnG8);
 
-    btnD9->setPos(720,gapy+270);
-    scene->addItem(btnD9);
+    btnG9->setPos(720,gapy+540);
+    scene->addItem(btnG9);
 
-    btnD10->setPos(810,gapy+270);
-    scene->addItem(btnD10);
+    btnG10->setPos(810,gapy+540);
+    scene->addItem(btnG10);
+
+    btnH1->setPos(0,gapy+630);
+    scene->addItem(btnH1);
+
+    btnH2->setPos(90,gapy+630);
+    scene->addItem(btnH2);
+
+    btnH3->setPos(180,gapy+630);
+    scene->addItem(btnH3);
+
+    btnH4->setPos(270,gapy+630);
+    scene->addItem(btnH4);
+
+    btnH5->setPos(360,gapy+630);
+    scene->addItem(btnH5);
+
+    btnH6->setPos(450,gapy+630);
+    scene->addItem(btnH6);
+
+    btnH7->setPos(540,gapy+630);
+    scene->addItem(btnH7);
+
+    btnH8->setPos(630,gapy+630);
+    scene->addItem(btnH8);
+
+    btnH9->setPos(720,gapy+630);
+    scene->addItem(btnH9);
+
+    btnH10->setPos(810,gapy+630);
+    scene->addItem(btnH10);
+
+    btnI1->setPos(0,gapy+720);
+    scene->addItem(btnI1);
+
+    btnI2->setPos(90,gapy+720);
+    scene->addItem(btnI2);
+
+    btnI3->setPos(180,gapy+720);
+    scene->addItem(btnI3);
+
+    btnI4->setPos(270,gapy+720);
+    scene->addItem(btnI4);
+
+    btnI5->setPos(360,gapy+720);
+    scene->addItem(btnI5);
+
+    btnI6->setPos(450,gapy+720);
+    scene->addItem(btnI6);
+
+    btnI7->setPos(540,gapy+720);
+    scene->addItem(btnI7);
+
+    btnI8->setPos(630,gapy+720);
+    scene->addItem(btnI8);
+
+    btnI9->setPos(720,gapy+720);
+    scene->addItem(btnI9);
+
+    btnI10->setPos(810,gapy+720);
+    scene->addItem(btnI10);
+
+    btnJ1->setPos(0,gapy+810);
+    scene->addItem(btnJ1);
+
+    btnJ2->setPos(90,gapy+810);
+    scene->addItem(btnJ2);
+
+    btnJ3->setPos(180,gapy+810);
+    scene->addItem(btnJ3);
+
+    btnJ4->setPos(270,gapy+810);
+    scene->addItem(btnJ4);
+
+    btnJ5->setPos(360,gapy+810);
+    scene->addItem(btnJ5);
+
+    btnJ6->setPos(450,gapy+810);
+    scene->addItem(btnJ6);
+
+    btnJ7->setPos(540,gapy+810);
+    scene->addItem(btnJ7);
+
+    btnJ8->setPos(630,gapy+810);
+    scene->addItem(btnJ8);
+
+    btnJ9->setPos(720,gapy+810);
+    scene->addItem(btnJ9);
+
+    btnJ10->setPos(810,gapy+810);
+    scene->addItem(btnJ10);
 
 /*
     // create the player

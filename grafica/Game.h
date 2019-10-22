@@ -2,11 +2,8 @@
 #define GAME_H
 
 #include <QGraphicsView>
-#include <QWidget>
 #include <QGraphicsScene>
 #include <QtWidgets/QPushButton>
-#include <iostream>
-#include "TorresPopUp.h"
 #include "Zombie.h"
 #include "Cuadro.h"
 

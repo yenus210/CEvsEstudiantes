@@ -1,14 +1,14 @@
 #include "Bullet.h"
 #include <QTimer>
-#include <QGraphicsScene>
 #include <QList>
 #include "Game.h"
 
 extern Game * game; // there is an external global object called game
 
-Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsRectItem(parent){
-    // drew the bullet (a rectangle)
-    setRect(0,0,10,50);
+Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
+    // draw graphics
+    setPixmap(QPixmap(":/images/bullet.png"));
+
 
     // make/connect a timer to move() the bullet every so often
     QTimer * timer = new QTimer(this);
@@ -18,15 +18,15 @@ Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsRectItem(parent){
     timer->start(50);
 }
 
-int Bullet::move(){
+void Bullet::move(){
     // get a list of all the items currently colliding with this bullet
     QList<QGraphicsItem *> colliding_items = collidingItems();
 
     // if one of the colliding items is an Enemy, destroy both the bullet and the enemy
-    /*for (int i = 0, n = colliding_items.size(); i < n; ++i){
-        if (typeid(*(colliding_items[i])) == typeid(Enemy)){
+    for (int i = 0, n = colliding_items.size(); i < n; ++i){
+        if (typeid(*(colliding_items[i])) == typeid(Zombie)){
             // increase the score
-            game->score->increase();
+            //game->score->increase();
 
             // remove them from the scene (still on the heap)
             scene()->removeItem(colliding_items[i]);
@@ -40,17 +40,13 @@ int Bullet::move(){
             return;
         }
     }
-*/
+
     // if there was no collision with an Enemy, move the bullet forward
     setPos(x(),y()-10);
     // if the bullet is off the screen, destroy it
-    if (pos().y() + rect().height() < 0){
+    if (pos().y() < 0){
         scene()->removeItem(this);
         delete this;
     }
 }
 
-
-Bullet::~Bullet() {
-
-}
