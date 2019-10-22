@@ -274,11 +274,65 @@ Game::Game(QWidget *parent){
     btnC10->setPos(810,gapy+270);
     scene->addItem(btnC10);
 
+    btnD1->setPos(0,gapy+270);
+    scene->addItem(btnD1);
 
+    btnD2->setPos(90,gapy+270);
+    scene->addItem(btnD2);
 
+    btnD3->setPos(180,gapy+270);
+    scene->addItem(btnD3);
 
+    btnD4->setPos(270,gapy+270);
+    scene->addItem(btnD4);
 
+    btnD5->setPos(360,gapy+270);
+    scene->addItem(btnD5);
 
+    btnD6->setPos(450,gapy+270);
+    scene->addItem(btnD6);
+
+    btnD7->setPos(540,gapy+270);
+    scene->addItem(btnD7);
+
+    btnD8->setPos(630,gapy+270);
+    scene->addItem(btnD8);
+
+    btnD9->setPos(720,gapy+270);
+    scene->addItem(btnD9);
+
+    btnD10->setPos(810,gapy+270);
+    scene->addItem(btnD10);
+
+    btnD1->setPos(0,gapy+270);
+    scene->addItem(btnD1);
+
+    btnD2->setPos(90,gapy+270);
+    scene->addItem(btnD2);
+
+    btnD3->setPos(180,gapy+270);
+    scene->addItem(btnD3);
+
+    btnD4->setPos(270,gapy+270);
+    scene->addItem(btnD4);
+
+    btnD5->setPos(360,gapy+270);
+    scene->addItem(btnD5);
+
+    btnD6->setPos(450,gapy+270);
+    scene->addItem(btnD6);
+
+    btnD7->setPos(540,gapy+270);
+    scene->addItem(btnD7);
+
+    btnD8->setPos(630,gapy+270);
+    scene->addItem(btnD8);
+
+    btnD9->setPos(720,gapy+270);
+    scene->addItem(btnD9);
+
+    btnD10->setPos(810,gapy+270);
+    scene->addItem(btnD10);
 
 /*
     // create the player
