@@ -17,7 +17,8 @@ using namespace std;
 class TorresPopUp: public QGraphicsView{
 public:
     TorresPopUp(QWidget * parent=0);
-    void actCasilla(string casilla);
+    string actCasilla();
+    string torre = "";
 private:
     QPushButton* torre1;
     QPushButton* torre2;
@@ -27,7 +28,7 @@ private:
     void handletorre2();
     void handletorre3();
     void handletorre4();
-    string casillaAct;
+
 
 
 };

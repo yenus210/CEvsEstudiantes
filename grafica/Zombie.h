@@ -24,7 +24,6 @@ private:
 
 public:
     int getZombienum() const;
-
     void setZombienum(int zombienum);
 };
 

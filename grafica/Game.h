@@ -23,7 +23,6 @@ public:
 
 
 private:
-    TorresPopUp *popUp=new TorresPopUp();
     Cuadro* btnAct;
     Cuadro* btnA1;
     Cuadro* btnA2;
@@ -135,6 +134,7 @@ private:
     Cuadro* btnJ9;
     Cuadro* btnJ10;
 
+    void mousePressEvent(QMouseEvent *event);
 };
 
 #endif // GAME_H

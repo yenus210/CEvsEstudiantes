@@ -50,23 +50,22 @@ TorresPopUp::TorresPopUp(QWidget * parent){
     torre4->setIcon(pixD);
     torre4->setIconSize(pixD.rect().size());
 }
-
-void TorresPopUp::actCasilla(string casilla){
-    casillaAct=casilla;
+string TorresPopUp::actCasilla(){
+    return torre;
 }
 
 void TorresPopUp::handletorre1() {
-    game->actCasilla("/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre1.png");
+    torre ="/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre1.png";
 }
 
 void TorresPopUp::handletorre2() {
-    game->actCasilla("/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre2.png");
+    torre ="/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre2.png";
 }
 
 void TorresPopUp::handletorre3() {
-    game->actCasilla("/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre3.png");
+    torre = "/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre3.png";
 }
 
 void TorresPopUp::handletorre4() {
-    game->actCasilla("/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre4.png");
+    torre="/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre4.png";
 }

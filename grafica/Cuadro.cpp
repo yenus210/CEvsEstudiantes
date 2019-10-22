@@ -4,22 +4,21 @@
 
 #include "Cuadro.h"
 #include "Game.h"
+#include <QTimer>
 
 extern Game * game;
 
-Cuadro::Cuadro(string id,QGraphicsItem *parent) {
-    *iD = id;
+Cuadro::Cuadro(QGraphicsItem *parent) {
     setPixmap(QPixmap("/home/yenus/CLionProjects/CEvsEstudiantes/art/block.png"));
 }
 
 void Cuadro::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-    handletorre("B9");
-    popUp->actCasilla(casilla);
-    popUp->show();
 
-    QPixmap pixa(img.c_str());
+    popUp->show();
+    string ruta =popUp->actCasilla();
+    QPixmap pixa(ruta.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-    btnAct->setPixmap(pixb);
+    setPixmap(pixb);
     popUp->close();
 }
 
