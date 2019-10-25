@@ -22,6 +22,8 @@ public:
 
 private:
     void detectZombie();
+    void cool();
+    bool flag=false;
 
     Cuadro* btnA1;
     Cuadro* btnA2;

@@ -15,6 +15,7 @@ public:
 private:
     int cont =1;
     int direccion =0;
+    int contDist =0;
 
 };
 

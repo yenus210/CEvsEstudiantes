@@ -6,6 +6,7 @@ Game::Game(QWidget *parent){
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,900,950); // make the scene 800x600 instead of infinity by infinity (default)
     int gapy=50;
+
     // make the newly created scene the scene to visualize (since Game is a QGraphicsView Widget,
     // it can be used to visualize scenes)
     setScene(scene);
@@ -524,11 +525,17 @@ Game::Game(QWidget *parent){
     buttonsL.append(btnJ10);
 
     // make/connect a timer to move() the bullet every so often
-    QTimer * timer = new QTimer(this);
-    connect(timer,&QTimer::timeout,this,&Game::detectZombie);
+    QTimer * timer1 = new QTimer(this);
+    connect(timer1,&QTimer::timeout,this,&Game::detectZombie);
 
     // start the timer
-    timer->start(100);
+    timer1->start(100);
+
+    QTimer * timer2 = new QTimer(this);
+    connect(timer2,&QTimer::timeout,this,&Game::cool);
+
+    // start the timer
+    timer2->start(1000);
 
 
 }
@@ -543,28 +550,42 @@ void Game::mousePressEvent(QMouseEvent *event) {
 void Game::detectZombie() {
     for (Cuadro *item:buttonsL ){
         if (item->ocupado){
-            for (QGraphicsItem *zomb :zombieL){               //                                          //                                     //
+            for (QGraphicsItem *zomb :zombieL){
+                if (!flag){//                                          //                                     //
                     if (zomb->y()>item->y() && zomb->y()<item->y()+90 && zomb->x()<item->x() && zomb->x()>item->x()-90*item->rango){
                         item->fire(0);
+                        flag=true;
                     }else if(zomb->y()<item->y() && zomb->y()>item->y()-90*item->rango && zomb->x()<item->x() && zomb->x()>item->x()-90*item->rango){
                         item->fire(1);
+                        flag=true;
                     }else if(zomb->y()>item->y()-90*item->rango && zomb->y()<item->y()&& zomb->x()>item->x() && zomb->x()<item->x()+90){
                         item->fire(2);
-                    }else if(zomb->y()>item->y() && zomb->y()<item->y()+90*item->rango && zomb->x()>item->x()+90 && zomb->x()<item->x()+90+90*item->rango){
+                        flag=true;
+                    }else if(zomb->y()<item->y() && zomb->y()>item->y()-90*item->rango && zomb->x()>item->x()+90 && zomb->x()<item->x()+90+90*item->rango){
                         item->fire(3);
+                        flag=true;
                     }else if(zomb->y()>item->y() && zomb->y()<item->y()+90 && zomb->x()>item->x()+90 && zomb->x()<item->x()+90+90*item->rango) {
                         item->fire(4);
+                        flag=true;
                     }else if(zomb->y()>item->y()+90 && zomb->y()<item->y()+90+90*item->rango && zomb->x()>item->x()+90 && zomb->x()<item->x()+90+90*item->rango) {
                         item->fire(5);
+                        flag=true;
                     }else if(zomb->y()>item->y()+90 && zomb->y()<item->y()+90+90*item->rango && zomb->x()>item->x() && zomb->x()<item->x()+90) {
                         item->fire(6);
+                        flag=true;
                     }else if(zomb->y()>item->y()+90 && zomb->y()<item->y()+90+90*item->rango && zomb->x()>item->x() && zomb->x()<item->x()+90*item->rango) {
                         item->fire(7);
+                        flag=true;
                     }
+            }
             }
         }
 
     }
+}
+
+void Game::cool() {
+    flag=false;
 }
 
 

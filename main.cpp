@@ -1,14 +1,17 @@
 #include <QApplication>
 #include "grafica/Game.h"
 #include "path/lista.h"
+#include "grafica/Menu.h"
 
 Game * game;
+Menu* menu;
 
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
 
+    menu = new Menu();
     game = new Game();
-    game->show();
+    menu->show();
 
 
     return a.exec();

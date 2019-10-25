@@ -11,12 +11,19 @@
 using namespace std;
 class Zombie: public QObject, public QGraphicsPixmapItem{
 public:
-    Zombie(int zombie, QGraphicsItem * parent=0);
+    Zombie(int ventana, int zombie, QGraphicsItem * parent=0);
     void setRuta(QList<string> lista );
+    int *gapy =new int(50);
+
 private:
     int move();
-    int destinoX;
-    int destinoY;
+    QList <int> destinoX = QList<int> {};
+    QList <int> destinoY = QList<int> {};
+    QList <int> L = QList<int> {};
+    int random=0;
+    int vel=5;
+    int ventanaN;
+
 
 
     string rutaOgro="/home/yenus/CLionProjects/CEvsEstudiantes/art/ogro";

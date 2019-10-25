@@ -17,10 +17,11 @@ Bullet::Bullet(int dir, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(p
     connect(timer,&QTimer::timeout,this,&Bullet::move);
 
     // start the timer
-    timer->start(100);
+    timer->start(30);
 }
 
 void Bullet::move(){
+    contDist+=10;
     if (cont ==1){
         QPixmap a=QPixmap("/home/yenus/CLionProjects/CEvsEstudiantes/art/quest1.png");
         QPixmap pixb = a.scaled(45, 45, Qt::IgnoreAspectRatio);
@@ -63,7 +64,11 @@ void Bullet::move(){
     }
 
     // if the bullet is off the screen, destroy it
-    if (pos().y() < 50){
+    if (pos().y() < 50) {
+        scene()->removeItem(this);
+        delete this;
+
+    }else if (contDist > 225){
         scene()->removeItem(this);
         delete this;
     }
