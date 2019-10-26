@@ -6,6 +6,8 @@
 #include <QtWidgets/QPushButton>
 #include "Zombie.h"
 #include "Cuadro.h"
+#include "../genetico/Estudiantes.h"
+#include "../genetico/Evolucionador.h"
 
 using namespace std;
 
@@ -21,6 +23,16 @@ public:
 
 
 private:
+    int cantidad = 10;
+    //Se da acceso al cálculo del algoritmo genético
+
+    /*//Arreglo inicial de 10 estudiantes con el que comenzará la población
+    Estudiantes PrimeraGen[cantidad];
+    Estudiantes SegundaGen[cantidad];
+    Estudiantes TerceraGen[cantidad];
+    Estudiantes CuartaGen[cantidad];
+    Estudiantes QuintaGen[cantidad];*/
+
     void detectZombie();
     void cool();
     bool flag=false;

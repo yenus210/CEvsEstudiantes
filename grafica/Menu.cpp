@@ -31,7 +31,7 @@ Menu::Menu(QWidget *parent) {
     connect(timer,&QTimer::timeout,this, &Menu::genZomb);
 
     // start the timer
-    timer->start(50);
+    timer->start(100);
 
 }
 

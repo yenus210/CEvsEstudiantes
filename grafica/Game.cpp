@@ -524,6 +524,8 @@ Game::Game(QWidget *parent){
     scene->addItem(btnJ10);
     buttonsL.append(btnJ10);
 
+
+
     // make/connect a timer to move() the bullet every so often
     QTimer * timer1 = new QTimer(this);
     connect(timer1,&QTimer::timeout,this,&Game::detectZombie);
@@ -589,17 +591,7 @@ void Game::cool() {
     flag=false;
 }
 /*
- *  int cantidad = 10;
-    //Se da acceso al cálculo del algoritmo genético
-
-    //Arreglo inicial de 10 estudiantes con el que comenzará la población
-    Estudiantes PrimeraGen[cantidad];
-    Estudiantes SegundaGen[cantidad];
-    Estudiantes TerceraGen[cantidad];
-    Estudiantes CuartaGen[cantidad];
-    Estudiantes QuintaGen[cantidad];
-
-    Evolucionador Engine;
+ *
 
     //PROCESO EVOLUTIVO
 
@@ -610,11 +602,7 @@ void Game::cool() {
     cout << "PRIMERA GENERACIÓN" << "\n";
     cout << "\n";
 
-    //Población inicial / Primera Generación
-    for (int i = 0; i < 10; i++){
-        cout << "" << "\n";
-        PrimeraGen[i].Estadisticas();   //Creo objetos tipo estudiantes almacenados en un array
-    }
+
 
     //Engine.Evolucion(PrimeraGen);
 
