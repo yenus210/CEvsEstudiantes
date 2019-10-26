@@ -23,16 +23,13 @@ private:
     int random=0;
     int vel=5;
     int ventanaN;
-
-
-
-    string rutaOgro="/home/yenus/CLionProjects/CEvsEstudiantes/art/ogro";
-    string rutaDark="/home/yenus/CLionProjects/CEvsEstudiantes/art/dark";
-    string rutaArpia="/home/yenus/CLionProjects/CEvsEstudiantes/art/arpia";
-    string rutaMerc="/home/yenus/CLionProjects/CEvsEstudiantes/art/mercenario";
-public:
+    string rutaOgro="../art/ogro";
+    string rutaDark="../art/dark";
+    string rutaArpia="../art/arpia";
+    string rutaMerc="../art/mercenario";
     int zombienum=1;
     int cont=1;
+
 
 
 };

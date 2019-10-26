@@ -6,7 +6,7 @@ extern Game * game; // there is an external global object called game
 Bullet::Bullet(int dir, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
     // draw graphics}
     direccion=dir;
-    QPixmap a=QPixmap("/home/yenus/CLionProjects/CEvsEstudiantes/art/quest1.png");
+    QPixmap a=QPixmap("../art/quest1.png");
     QPixmap pixb = a.scaled(45, 45, Qt::IgnoreAspectRatio);
     setPixmap(pixb);
 
@@ -23,12 +23,12 @@ Bullet::Bullet(int dir, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(p
 void Bullet::move(){
     contDist+=10;
     if (cont ==1){
-        QPixmap a=QPixmap("/home/yenus/CLionProjects/CEvsEstudiantes/art/quest1.png");
+        QPixmap a=QPixmap("../art/quest1.png");
         QPixmap pixb = a.scaled(45, 45, Qt::IgnoreAspectRatio);
         setPixmap(pixb);
         cont++;
     }else{
-        QPixmap a=QPixmap("/home/yenus/CLionProjects/CEvsEstudiantes/art/quest2.png");
+        QPixmap a=QPixmap("../art/quest2.png");
         QPixmap pixb = a.scaled(45, 45, Qt::IgnoreAspectRatio);
         setPixmap(pixb);
         cont = 1;

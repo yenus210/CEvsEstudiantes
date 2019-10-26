@@ -13,16 +13,19 @@ Menu::Menu(QWidget *parent) {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(450,475);
+    setBackgroundBrush(QBrush(QImage("../art/bg.png")));
 
     btn1 = new QPushButton("Modo\nProfe",this);
     btn1->setFont(QFont("times",16,63));
-    btn1->setGeometry(160, 130, 130 , 60);
+    btn1->setGeometry(140, 120, 180 , 90);
     connect(btn1 ,&QPushButton::clicked, this, &Menu::handlebtn1);
+    btn1->setStyleSheet("QPushButton { border-image: url(../art/butBG.png); color: white;}");
 
     btn2 = new QPushButton("Modo\nEstudiante",this);
     btn2->setFont(QFont("times",16,63));
-    btn2->setGeometry(160, 260, 130 , 60);
+    btn2->setGeometry(140, 250, 180 , 90);
     connect(btn2 ,&QPushButton::clicked, this, &Menu::handlebtn2);
+    btn2->setStyleSheet("QPushButton { border-image: url(../art/butBG.png); color: white;}");
 
     QTimer * timer = new QTimer(this);
     connect(timer,&QTimer::timeout,this, &Menu::genZomb);
@@ -50,7 +53,7 @@ void Menu::handlebtn2() {
 }
 void Menu::genZomb() {
 
-    int random = rand() % 4;
+    int random = rand() % 5;
     Zombie *z = new Zombie(0,random);
     zombieL.append(z);
     QList<string> List = {"Menu"};

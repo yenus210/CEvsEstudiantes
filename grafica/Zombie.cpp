@@ -28,7 +28,6 @@ Zombie::Zombie(int ventana,int zombie, QGraphicsItem *parent): QObject(), QGraph
         setPos(L.at(random),950);
     }
 
-    game->zombieL.append(this);
 
     // drew the rect
     switch(zombienum) {
@@ -152,6 +151,7 @@ int Zombie::move(){
             //game->health->decrease();
             scene()->removeItem(this);
             menu->zombieL.removeOne(this);
+            game->zombieL.removeOne(this);
             delete this;
         }
     }else {
@@ -160,6 +160,7 @@ int Zombie::move(){
             //game->health->decrease();
             scene()->removeItem(this);
             game->zombieL.removeOne(this);
+            menu->zombieL.removeOne(this);
             delete this;
         }
     }

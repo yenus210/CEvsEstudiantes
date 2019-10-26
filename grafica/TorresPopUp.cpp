@@ -29,30 +29,30 @@ TorresPopUp::TorresPopUp(QWidget * parent){
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(410,110);
 
-    QPixmap pix1("/home/yenus/CLionProjects/CEvsEstudiantes/art/torre1.png");
+    QPixmap pix1("../art/torre1.png");
     QPixmap pixA = pix1.scaled(90, 90, Qt::IgnoreAspectRatio);
     torre1->setIcon(pixA);
     torre1->setIconSize(pixA.rect().size());
 
-    QPixmap pix2("/home/yenus/CLionProjects/CEvsEstudiantes/art/torre2.png");
+    QPixmap pix2("../art/torre2.png");
     QPixmap pixB = pix2.scaled(90, 90, Qt::IgnoreAspectRatio);
     torre2->setIcon(pixB);
     torre2->setIconSize(pixB.rect().size());
 
-    QPixmap pix3("/home/yenus/CLionProjects/CEvsEstudiantes/art/torre3.png");
+    QPixmap pix3("../art/torre3.png");
     QPixmap pixC = pix3.scaled(90, 90, Qt::IgnoreAspectRatio);
     torre3->setIcon(pixC);
     torre3->setIconSize(pixC.rect().size());
 
 
-    QPixmap pix4("/home/yenus/CLionProjects/CEvsEstudiantes/art/torre4.png");
+    QPixmap pix4("../art/torre4.png");
     QPixmap pixD = pix4.scaled(90, 90, Qt::IgnoreAspectRatio);
     torre4->setIcon(pixD);
     torre4->setIconSize(pixD.rect().size());
 }
 
 void TorresPopUp::handletorre1() {
-    torre ="/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre1.png";
+    torre ="../art/blocktorre1.png";
 
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
@@ -62,7 +62,7 @@ void TorresPopUp::handletorre1() {
 }
 
 void TorresPopUp::handletorre2() {
-    torre ="/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre2.png";
+    torre ="../art/blocktorre2.png";
 
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
@@ -72,7 +72,7 @@ void TorresPopUp::handletorre2() {
 }
 
 void TorresPopUp::handletorre3() {
-    torre = "/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre3.png";
+    torre = "../art/blocktorre3.png";
 
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
@@ -82,7 +82,7 @@ void TorresPopUp::handletorre3() {
 }
 
 void TorresPopUp::handletorre4() {
-    torre="/home/yenus/CLionProjects/CEvsEstudiantes/art/blocktorre4.png";
+    torre="../art/blocktorre4.png";
 
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);

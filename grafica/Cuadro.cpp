@@ -8,7 +8,7 @@
 extern Game * game;
 
 Cuadro::Cuadro(QGraphicsItem *parent) {
-    setPixmap(QPixmap("/home/yenus/CLionProjects/CEvsEstudiantes/art/block.png"));
+    setPixmap(QPixmap("../art/block.png"));
 
 }
 
@@ -19,6 +19,7 @@ void Cuadro::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     Zombie *z1 = new Zombie(1,1);
     QList <string> L = {"J3","I2","H1","G2","F3","E4","D5","C4","B3","A4"};
     z1->setRuta(L);
+    game->zombieL.append(z1);
     scene()->addItem(z1);
 
 

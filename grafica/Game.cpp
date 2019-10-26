@@ -548,10 +548,11 @@ void Game::mousePressEvent(QMouseEvent *event) {
 }
 
 void Game::detectZombie() {
+    if (!flag){
     for (Cuadro *item:buttonsL ){
         if (item->ocupado){
             for (QGraphicsItem *zomb :zombieL){
-                if (!flag){//                                          //                                     //
+                //                                          //                                     //
                     if (zomb->y()>item->y() && zomb->y()<item->y()+90 && zomb->x()<item->x() && zomb->x()>item->x()-90*item->rango){
                         item->fire(0);
                         flag=true;
