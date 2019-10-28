@@ -16,19 +16,23 @@ Backtracking::Backtracking(){
  * -------------------------------*/
 
 // Metodo inicial de la funcion
-string Backtracking::Backtracking_Search(int (*maze)[10]){
 
-    Lista *path = new Lista();
-    if(!Backtracking_Solver(maze,0,0,path)){
+Lista * Backtracking::get_path(){
+    return strpath;
+}
+
+string Backtracking::Backtracking_Search(int maze[][10],int x, int y){
+
+    auto *path = new Lista();
+    if(!Backtracking_Solver(maze,x,y,path)){
         return this->_path;
     }
-
     return this->_path;
 }
 
 
 // Metodo recursivo de Backtracking
-bool Backtracking::Backtracking_Solver(int (*maze)[10], int x, int y, Lista *path){
+bool Backtracking::Backtracking_Solver(int maze[][10], int x, int y, Lista *path){
 
     // Si (x,y) es la salida return true
     if(x == 9 && y == 9)
@@ -74,12 +78,9 @@ bool Backtracking::Backtracking_Solver(int (*maze)[10], int x, int y, Lista *pat
     return false;
 }
 
-/* -------------------------------
- *          METODOS EXTRA
- * -------------------------------*/
 
 // Metodo que valida si la posicion es valida
-bool Backtracking::is_safe_Bt(int (*maze)[10],int x, int y){
+bool Backtracking::is_safe_Bt(int maze[][10],int x, int y){
     // Si (x,y) se encuentra fuera del laberinto return False
     if(x >= 0 && x < 10 && y >= 0 && y < 10 && maze[x][y] == 0){
         return true;
@@ -88,9 +89,95 @@ bool Backtracking::is_safe_Bt(int (*maze)[10],int x, int y){
 }
 
 // Metodo que muestra el path en consola
-void Backtracking::trace_path(Lista *path){
-    while(!path->empty()){
+void Backtracking::trace_path(Lista *path) {
+    string cell;
+    for (int i = 0; i < path->size(); i++) {
+        cell = path->get_index(i);
+        if ((cell.front()) == '0') {
+            trace_strpath(cell[1], "J");
+        }
+        if ((cell.front()) == '1') {
+            trace_strpath(cell[1], "I");
+        }
+        if ((cell.front()) == '2') {
+            trace_strpath(cell[1], "H");
+        }
+        if ((cell.front()) == '3') {
+            trace_strpath(cell[1], "G");
+        }
+        if ((cell.front()) == '4') {
+            trace_strpath(cell[1], "F");
+        }
+        if ((cell.front()) == '5') {
+            trace_strpath(cell[1], "E");
+        }
+        if ((cell.front()) == '6') {
+            trace_strpath(cell[1], "D");
+        }
+        if ((cell.front()) == '7') {
+            trace_strpath(cell[1], "C");
+        }
+        if ((cell.front()) == '8') {
+            trace_strpath(cell[1], "B");
+        }
+        if ((cell.front()) == '9') {
+            trace_strpath(cell[1], "A");
+        }
+
+
+        //cout<<_path<<endl;
+    }
+    strpath->print_lista();
+    while (!path->empty()) {
         _path += path->pop_front();
     }
-    //cout<<_path<<endl;
+}
+
+void Backtracking::trace_strpath(char cell, string letra){
+        string name;
+        string front;
+        if (cell == '0'){
+            name= "1";
+        }
+        if (cell== '1'){
+            name= "2";
+        }
+        if (cell == '2'){
+            name= "3";
+        }
+        if (cell == '3'){
+            name= "4";
+        }
+        if (cell == '4'){
+            name= "5";
+        }
+        if (cell == '5'){
+            name= "6";
+        }
+        if (cell == '6'){
+            name= "7";
+        }
+        if (cell == '7'){
+            name= "8";
+        }
+        if (cell == '8'){
+            name= "9";
+        }
+        if (cell== '9'){
+            name= "10";
+        }
+        strpath->push_back(letra + name);
+
+
+    }
+
+
+void Backtracking::print_maze(int maze[][10]) {
+    for (int row = 0; row < 10; row++) {
+        cout << "{ ";
+        for (int col = 0; col < 10; col++) {
+            cout << maze[row][col] << " ";
+        }
+        cout << " }" << endl;
+    }
 }

@@ -16,7 +16,7 @@ using namespace std;
 
 /*-------------------- NOTA ----------------------------
   Como convencion usamos las casillas disponibles como 0
-  y las casillas con obtaculo como 1
+  y las casillas con obstaculo como 1
   -----------------------------------------------------*/
 
 //!
@@ -25,8 +25,7 @@ using namespace std;
 class Backtracking{
 
     string _path;//!< Ruta que encuentra el algoritmo
-
-    int _time; //!< Tiempo que tarda el algoritmo en encontrar la ruta
+    Lista *strpath = new Lista;
 
     //!
     //! \brief is_safe
@@ -50,7 +49,7 @@ public:
     //! @brief Implementacion del algoritmo de busqueda Backtracking.
     //! @param[in] maze: Laberinto sobre el que se realiza la busqueda.
     //! @return[out] Ruta encontrada para salir del laberinto.
-    string Backtracking_Search(int (*maze)[10]);
+    string Backtracking_Search(int maze[][10],int x, int y);
 
     //!
     //! \brief solve_Bt
@@ -60,6 +59,10 @@ public:
     //! \return
     //!
     bool Backtracking_Solver(int (*maze)[10], int x, int y, Lista *path);
+    void trace_strpath(char cell, string letra);
+    Lista * get_path();
+
+    void print_maze(int(*maze)[10]);
 
 };
 
