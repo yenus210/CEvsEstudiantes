@@ -7,8 +7,9 @@
 
 extern Game * game;
 
-Cuadro::Cuadro(QGraphicsItem *parent) {
+Cuadro::Cuadro(QString id, QGraphicsItem *parent) {
     setPixmap(QPixmap("../art/block.png"));
+id=iD;
 
 }
 
