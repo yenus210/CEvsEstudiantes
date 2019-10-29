@@ -59,34 +59,34 @@ Lista * A_star::get_path(){
         {
 
             if (row == 0) {
-                strpath->push_front("J" + to_string(col));
+                strpath->push_front("J" + to_string(col+1));
             }
             if (row == 1) {
-                strpath->push_front("I" + to_string(col));
+                strpath->push_front("I" + to_string(col+1));
             }
             if (row == 2) {
-                strpath->push_front("H" + to_string(col));
+                strpath->push_front("H" + to_string(col+1));
             }
             if (row == 3) {
-                strpath->push_front("G" + to_string(col));
+                strpath->push_front("G" + to_string(col+1));
             }
             if (row == 4) {
-                strpath->push_front("F" + to_string(col));
+                strpath->push_front("F" + to_string(col+1));
             }
             if (row == 5) {
-                strpath->push_front("E" + to_string(col));
+                strpath->push_front("E" + to_string(col+1));
             }
             if (row == 6) {
-                strpath->push_front("D" + to_string(col));
+                strpath->push_front("D" + to_string(col+1));
             }
             if (row == 7) {
-                strpath->push_front("C" + to_string(col));
+                strpath->push_front("C" + to_string(col+1));
             }
             if (row == 8) {
-                strpath->push_front("B" + to_string(col));
+                strpath->push_front("B" + to_string(col+1));
             }
             if (row == 9) {
-                strpath->push_front("A" + to_string(col));
+                strpath->push_front("A" + to_string(col+1));
             }
 
             Path.push (make_pair (row, col));
@@ -97,34 +97,34 @@ Lista * A_star::get_path(){
         }
 
         if (row == 0) {
-            strpath->push_front("J" + to_string(col));
+            strpath->push_front("J" + to_string(col+1));
         }
         if (row == 1) {
-            strpath->push_front("I" + to_string(col));
+            strpath->push_front("I" + to_string(col+1));
         }
         if (row == 2) {
-            strpath->push_front("H" + to_string(col));
+            strpath->push_front("H" + to_string(col+1));
         }
         if (row == 3) {
-            strpath->push_front("G" + to_string(col));
+            strpath->push_front("G" + to_string(col+1));
         }
         if (row == 4) {
-            strpath->push_front("F" + to_string(col));
+            strpath->push_front("F" + to_string(col+1));
         }
         if (row == 5) {
-            strpath->push_front("E" + to_string(col));
+            strpath->push_front("E" + to_string(col+1));
         }
         if (row == 6) {
-            strpath->push_front("D" + to_string(col));
+            strpath->push_front("D" + to_string(col+1));
         }
         if (row == 7) {
-            strpath->push_front("C" + to_string(col));
+            strpath->push_front("C" + to_string(col+1));
         }
         if (row == 8) {
-            strpath->push_front("B" + to_string(col));
+            strpath->push_front("B" + to_string(col+1));
         }
         if (row == 9) {
-            strpath->push_front("A" + to_string(col));
+            strpath->push_front("A" + to_string(col+1));
         }
 
         //strpath->print_lista();

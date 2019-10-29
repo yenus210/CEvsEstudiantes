@@ -29,11 +29,12 @@ string Backtracking::Backtracking_Search(int maze[][10],int x, int y){
 bool Backtracking::Backtracking_Solver(int maze[][10], int x, int y, Lista *path){
 
     // Si (x,y) es la salida return true
-    if(x == 9 && y == 9)
+    //if(x == 9 && y == 9)
+    if (x==9)
     {
         // Se agrega (x,y) al path
         path->push_back(to_string(x) + to_string(y) + "-");
-        maze[x][y] = 5;
+        //maze[x][y] = 5;
 
         // Se convierte la lista al string
         trace_path(path);
@@ -45,15 +46,15 @@ bool Backtracking::Backtracking_Solver(int maze[][10], int x, int y, Lista *path
     {
         // Marcar x,y como parte del path
         path->push_back(to_string(x)+to_string(y)+"-" );
-        maze[x][y] = 5;
+        //maze[x][y] = 5;
 
         // Moverse hacia adelante
-        if (Backtracking_Solver(maze, x, y+1, path) == true)
+        if (Backtracking_Solver(maze, x+1, y, path) == true)
             return true;
 
         /* Si moverse hacia el frente no es una solucion
            entonces intenta moverse hacia abajo  */
-        if (Backtracking_Solver(maze, x+1, y, path) == true)
+        if (Backtracking_Solver(maze, x, y+1, path) == true)
             return true;
 
         /* Si ninguna de estas lleva a una solucion entonces

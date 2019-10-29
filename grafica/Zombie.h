@@ -11,11 +11,17 @@
 using namespace std;
 class Zombie: public QObject, public QGraphicsPixmapItem{
 public:
+    //! Coloca al zombie en una posición random para entrar en la matriz y le asigna la imagen
+    //! \param ventana
+    //! \param zombie
+    //! \param parent
     Zombie(int ventana, int zombie, QGraphicsItem * parent=0);
     void setRuta(QList<string> lista );
     int *gapy =new int(50);
 
 private:
+    //!Permite el movimiento del zombie por la matriz y les asiga la ruta que debe seguir cada tipo
+    //! \return
     int move();
     QList <int> destinoX = QList<int> {};
     QList <int> destinoY = QList<int> {};

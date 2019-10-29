@@ -32,11 +32,11 @@ private:
     Estudiantes TerceraGen[cantidad];
     Estudiantes CuartaGen[cantidad];
     Estudiantes QuintaGen[cantidad];*/
-
+    //!@brief Función para detectar cuando el zombie está cerca de la torre
     void detectZombie();
     void cool();
     bool flag=false;
-
+    //! Todos los botones de la matriz
     Cuadro* btnA1;
     Cuadro* btnA2;
     Cuadro* btnA3;
@@ -146,7 +146,8 @@ private:
     Cuadro* btnJ8;
     Cuadro* btnJ9;
     Cuadro* btnJ10;
-
+    //! @brief Evento al presionar el el botón del mouse
+    //! \param event
     void mousePressEvent(QMouseEvent *event);
 };
 

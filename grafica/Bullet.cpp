@@ -10,8 +10,6 @@ Bullet::Bullet(int dir, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(p
     QPixmap pixb = a.scaled(45, 45, Qt::IgnoreAspectRatio);
     setPixmap(pixb);
 
-
-
     // make/connect a timer to move() the bullet every so often
     QTimer * timer = new QTimer(this);
     connect(timer,&QTimer::timeout,this,&Bullet::move);

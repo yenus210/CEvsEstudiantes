@@ -10,7 +10,11 @@
 
 class Bullet: public QObject,public QGraphicsPixmapItem {
 public:
+    //! Maneja las colisiones de los disparos
+    //! \param dir coordenadas del disparo
+    //! \param parent
     Bullet(int dir,  QGraphicsItem * parent=0);
+    //! Maneja el movimiento del disparo
     void move();
 private:
     int cont =1;
