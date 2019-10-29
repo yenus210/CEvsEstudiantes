@@ -10,10 +10,11 @@
 #include <vector>
 #include <string>
 #include "lista.h"
+#define ROW 10
+#define COL 10
 
 using namespace std;
 
-// A structure to hold the neccesary parameters
 struct cell
 {
     // Row and Column index of its parent
@@ -23,25 +24,51 @@ struct cell
     double f, g, h;
 };
 
-#define ROW 10
-#define COL 10
 
 class A_star{
 
 public:
-    Lista *strpath = new Lista;
 
+    Lista *strpath = new Lista;
     typedef pair<int, int> Pair;
     typedef pair<double, pair<int, int>> pPair;
 
     //! @brief Constructor
     A_star();
+    //! @brief getter del path
+    //! \return
     Lista * get_path();
+    //! @brief Valida si la celda es valida
+    //! \param row numero de fila
+    //! \param col numero de columna
+    //! \return
     bool isValid(int row, int col);
+    //! @brief Valida si la celda está ocupada
+    //! \param grid la matriz
+    //! \param row numero de fila
+    //! \param col numero de columna
+    //! \return
     bool isUnBlocked(int grid[][COL], int row, int col);
+    //! @brief Valida si es la celda de destino
+    //! \param row numero de fila
+    //! \param col numero de columna
+    //! \param dest celda de destino
+    //! \return
     bool isDestination(int row, int col, Pair dest);
+    //! @brief Calcula el valor del H
+    //! \param row numero de fila
+    //! \param col numero de columna
+    //! \param dest celda de destino
+    //! \return
     double calculateHValue(int row, int col, Pair dest);
+    //! @brief Traza la ruta
+    //! \param cellDetails
+    //! \param dest celda de destino
     void tracePath(cell cellDetails[][COL], Pair dest);
+    //! @brief Realiza todo el proceso de búsqueda de la ruta
+    //! \param grid matriz
+    //! \param src celda de inicio
+    //! \param dest celda de destino
     void aStarSearch(int grid[][COL], Pair src, Pair dest);
 
 };

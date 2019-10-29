@@ -17,6 +17,7 @@ int Backtracking_test(int maze[][10]){
 
     auto *solver1 = new Backtracking();
     solver1->Backtracking_Search(maze,0,3);
+    solver1->get_path();
     return 0;
 }
 
@@ -30,6 +31,7 @@ int A_star_test(int maze[][10]){
     Pair src = make_pair(0, 3);
     Pair dest = make_pair(9, 9);
     solver->aStarSearch(maze, src, dest);
+    solver->get_path();
     return(0);
 }
 
@@ -40,13 +42,11 @@ int main(int argc, char *argv[]){
     maze[0][4]=1;
 
     QApplication a(argc, argv);
-
     menu = new Menu();
     game = new Game();
     menu->show();
     A_star_test(maze);
     Backtracking_test(maze);
-
 
     return a.exec();
 }

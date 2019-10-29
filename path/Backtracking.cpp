@@ -4,21 +4,17 @@
 #include "lista.h"
 #include "Backtracking.h"
 
-/* -------------------------------
- *          CONSTRUCTOR
- * -------------------------------*/
+
 Backtracking::Backtracking(){
 
 }
 
-/* -------------------------------
- *          METODOS UTIL
- * -------------------------------*/
-
 // Metodo inicial de la funcion
 
 Lista * Backtracking::get_path(){
+    strpath->print_lista();
     return strpath;
+
 }
 
 string Backtracking::Backtracking_Search(int maze[][10],int x, int y){
@@ -29,8 +25,6 @@ string Backtracking::Backtracking_Search(int maze[][10],int x, int y){
     }
     return this->_path;
 }
-
-
 // Metodo recursivo de Backtracking
 bool Backtracking::Backtracking_Solver(int maze[][10], int x, int y, Lista *path){
 
@@ -46,7 +40,7 @@ bool Backtracking::Backtracking_Solver(int maze[][10], int x, int y, Lista *path
         return true;
     }
 
-    // Verifica si maze[x][y] es una posicion valida
+    // Verifica si maze[x][y] es una posición valida
     if(is_safe_Bt(maze,x,y))
     {
         // Marcar x,y como parte del path
@@ -127,7 +121,7 @@ void Backtracking::trace_path(Lista *path) {
 
         //cout<<_path<<endl;
     }
-    strpath->print_lista();
+    //strpath->print_lista();
     while (!path->empty()) {
         _path += path->pop_front();
     }
@@ -167,11 +161,7 @@ void Backtracking::trace_strpath(char cell, string letra){
             name= "10";
         }
         strpath->push_back(letra + name);
-
-
     }
-
-
 void Backtracking::print_maze(int maze[][10]) {
     for (int row = 0; row < 10; row++) {
         cout << "{ ";

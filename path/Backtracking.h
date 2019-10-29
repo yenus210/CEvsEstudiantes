@@ -47,19 +47,24 @@ public:
     Backtracking();
 
     //! @brief Implementacion del algoritmo de busqueda Backtracking.
-    //! @param[in] maze: Laberinto sobre el que se realiza la busqueda.
+    //! @param[in] maze: Matriz sobre el que se realiza la busqueda.
     //! @return[out] Ruta encontrada para salir del laberinto.
     string Backtracking_Search(int maze[][10],int x, int y);
 
     //!
     //! \brief solve_Bt
-    //! \param x
-    //! \param y
+    //! \param x celda de inicio(fila)
+    //! \param y celda de inicio (columna)
     //! \param path
     //! \return
     //!
     bool Backtracking_Solver(int (*maze)[10], int x, int y, Lista *path);
+    //! \brief conversion de coordenadas a los nombres de las celdas en la interfaz
+    //! \param cell numero de columna
+    //! \param letra de la fila
     void trace_strpath(char cell, string letra);
+    //! \brief getter del path
+    //! \return
     Lista * get_path();
 
     void print_maze(int(*maze)[10]);

@@ -3,24 +3,19 @@
 #include "A_star.h"
 
 
-    A_star::A_star() {
+A_star::A_star() {
 
-    }
-    // A Utility Function to check whether given cell (row, col)
-    // is a valid cell or not.
-    bool A_star::isValid(int row, int col)
-    {
-        // Returns true if row number and column number
-        // is in range
-        return (row >= 0) && (row < ROW) &&
-               (col >= 0) && (col < COL);
-    }
+}
+bool A_star::isValid(int row, int col)
+{
+    return (row >= 0) && (row < ROW) &&
+    (col >= 0) && (col < COL);
+}
 Lista * A_star::get_path(){
+    strpath->print_lista();
     return strpath;
 }
 
-    // A Utility Function to check whether the given cell is
-    // blocked or not
     bool A_star::isUnBlocked(int grid[][COL], int row, int col)
     {
         // Returns true if the cell is not blocked else false
@@ -132,7 +127,7 @@ Lista * A_star::get_path(){
             strpath->push_front("A" + to_string(col));
         }
 
-        strpath->print_lista();
+        //strpath->print_lista();
 
         Path.push (make_pair (row, col));
 
@@ -241,28 +236,6 @@ Lista * A_star::get_path(){
             j = p.second.second;
             closedList[i][j] = true;
 
-            /*
-                Generating all the 8 successor of this cell
-
-                    N.W N N.E
-                    \ | /
-                    \ | /
-                    W----Cell----E
-                        / | \
-                    / | \
-                    S.W S S.E
-
-                Cell-->Popped Cell (i, j)
-                N --> North	 (i-1, j)
-                S --> South	 (i+1, j)
-                E --> East	 (i, j+1)
-                W --> West		 (i, j-1)
-                N.E--> North-East (i-1, j+1)
-                N.W--> North-West (i-1, j-1)
-                S.E--> South-East (i+1, j+1)
-                S.W--> South-West (i+1, j-1)*/
-
-            // To store the 'g', 'h' and 'f' of the 8 successors
             double gNew, hNew, fNew;
 
             //----------- 1st Successor (North) ------------

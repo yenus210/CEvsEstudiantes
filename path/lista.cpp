@@ -5,20 +5,10 @@
 #include "lista.h"
 using namespace std;
 
-
-/* -------------------------------
- *          CONSTRUCTOR
- * -------------------------------*/
-
-
 Lista::Lista(){
     this->front = nullptr;
     this->_size = 0;
 }
-
-/* -------------------------------
- *          METODOS LISTA
- * -------------------------------*/
 
 // Insertar elemento al final de la lista
 
@@ -38,8 +28,6 @@ void Lista::push_back(string dato){
 
     }
 }
-
-
 // Insertar elemento al inicio de la lista
 
 void Lista::push_front(string dato){
@@ -54,7 +42,6 @@ void Lista::push_front(string dato){
         this->_size++;
     }
 }
-
 
 // Elimina elemento al final de la lista
 
@@ -182,12 +169,9 @@ string Lista::get(string dato){
 
     return aux->get_Dato();
 }
-
-
 int Lista::size(){
     return this->_size;
 }
-
 
 bool Lista::contains(string elem){
     if(front){
@@ -198,11 +182,6 @@ bool Lista::contains(string elem){
     }
     return false;
 }
-
-
-/* -------------------------------
- *              UTIL
- * -------------------------------*/
 void Lista::print_lista(){
     for(Nodo *nodo = front; nodo!= nullptr; nodo = nodo->get_Next()){
         cout<<"[ "<<nodo->get_Dato()<<" ]->";
