@@ -3,11 +3,16 @@
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QLabel>
 #include <QtWidgets/QPushButton>
 #include "Zombie.h"
 #include "Cuadro.h"
 #include "../genetico/Estudiantes.h"
 #include "../genetico/Evolucionador.h"
+#include "../path/Backtracking.h"
+#include "../path/A_star.h"
+#include "../path/lista.h"
+#include "../path/Nodo.h"
 
 using namespace std;
 
@@ -20,23 +25,37 @@ public:
     ~Game();
     QList<Cuadro *> buttonsL;
     QList<QGraphicsItem *> zombieL;
+    int oleada=0;
+    int modo=0;
+    int creditos=5;
 
+
+    int (*maze)[10] = (int(*)[10]) calloc(10,sizeof(*maze));
+
+
+    void paso();
 
 private:
-    int cantidad = 10;
-    //Se da acceso al cálculo del algoritmo genético
 
-    /*//Arreglo inicial de 10 estudiantes con el que comenzará la población
-    Estudiantes PrimeraGen[cantidad];
-    Estudiantes SegundaGen[cantidad];
-    Estudiantes TerceraGen[cantidad];
-    Estudiantes CuartaGen[cantidad];
-    Estudiantes QuintaGen[cantidad];*/
-    //!@brief Función para detectar cuando el zombie está cerca de la torre
+    QLabel *cred;
+    //Arreglo inicial de 10 estudiantes con el que comenzará la población
+    Estudiantes PrimeraGen[10];
+    Estudiantes SegundaGen[10];
+    Estudiantes TerceraGen[10];
+    Estudiantes CuartaGen[10];
+    Estudiantes QuintaGen[10];
+    Backtracking solver1=Backtracking();
+    A_star solver = A_star();
+    typedef pair<int, int> Pair;
+    typedef pair<double, pair<int, int>> pPair;
+    QList <string> L;
+
+
     void detectZombie();
+    void detectaOleada();
     void cool();
     bool flag=false;
-    //! Todos los botones de la matriz
+
     Cuadro* btnA1;
     Cuadro* btnA2;
     Cuadro* btnA3;
@@ -146,8 +165,7 @@ private:
     Cuadro* btnJ8;
     Cuadro* btnJ9;
     Cuadro* btnJ10;
-    //! @brief Evento al presionar el el botón del mouse
-    //! \param event
+
     void mousePressEvent(QMouseEvent *event);
 };
 

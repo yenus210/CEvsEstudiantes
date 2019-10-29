@@ -89,17 +89,19 @@ void Bullet::move(){
     // if one of the colliding items is an Zombie, destroy both the bullet and the enemy
     for (int i = 0, n = colliding_items.size(); i < n; ++i){
         if (typeid(*(colliding_items[i])) == typeid(Zombie)){
-            // increase the score
-            //game->score->increase();
 
+            ((Zombie*)colliding_items[i])->estud.setVida(((Zombie*)colliding_items[i])->estud.getVida()-1);
+            if(((Zombie*)colliding_items[i])->estud.getVida()==0){
+                scene()->removeItem(colliding_items[i]);
+                game->zombieL.removeOne(colliding_items[i]);
+                delete colliding_items[i];
+                game->creditos+=5;
+            }
             // remove them from the scene (still on the heap)
-            //scene()->removeItem(colliding_items[i]);
+
             scene()->removeItem(this);
-            //game->zombieL.removeOne(colliding_items[i]);
-
-
             // delete them from the heap to save memory
-            //delete colliding_items[i];
+
             delete this;
 
             // return (all code below refers to a non existint bullet)

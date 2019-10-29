@@ -54,40 +54,71 @@ TorresPopUp::TorresPopUp(QWidget * parent){
 void TorresPopUp::handletorre1() {
     torre ="../art/blocktorre1.png";
 
-    QPixmap pixa(torre.c_str());
-    QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-    C->setPixmap(pixb);
-    C->ocupado=true;
+    if (game->creditos<5){
+        QMessageBox mens = QMessageBox();
+        mens.setText("No dispone de suficientes creditos");
+        mens.exec();
+    }else{
+        QPixmap pixa(torre.c_str());
+        QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+        C->setPixmap(pixb);
+        C->ocupado=true;
+        C->actMatriz();
+        game->creditos-=5;
+
+    }
     close();
 }
 
 void TorresPopUp::handletorre2() {
     torre ="../art/blocktorre2.png";
-
+    if (game->creditos<10){
+        QMessageBox mens = QMessageBox();
+        mens.setText("No dispone de suficientes creditos");
+        mens.exec();
+    }else{
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
     C->ocupado=true;
+    C->actMatriz();
+    game->creditos-=10;
+
+}
     close();
 }
 
 void TorresPopUp::handletorre3() {
     torre = "../art/blocktorre3.png";
-
+    if (game->creditos<15){
+        QMessageBox mens = QMessageBox();
+        mens.setText("No dispone de suficientes creditos");
+        mens.exec();
+    }else{
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
     C->ocupado=true;
+    C->actMatriz();
+        game->creditos-=15;
+}
     close();
 }
 
 void TorresPopUp::handletorre4() {
     torre="../art/blocktorre4.png";
-
+    if (game->creditos<20){
+        QMessageBox mens = QMessageBox();
+        mens.setText("No dispone de suficientes creditos");
+        mens.exec();
+    }else{
     QPixmap pixa(torre.c_str());
     QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
     C->setPixmap(pixb);
     C->ocupado=true;
+    C->actMatriz();
+        game->creditos-=20;
+}
     close();
 }
 

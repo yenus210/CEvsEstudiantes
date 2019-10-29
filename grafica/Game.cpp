@@ -1,3 +1,4 @@
+#include <QtWidgets/QMessageBox>
 #include "Game.h"
 
 
@@ -6,6 +7,9 @@ Game::Game(QWidget *parent){
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,900,950); // make the scene 800x600 instead of infinity by infinity (default)
     int gapy=50;
+    cred=new QLabel(this);
+    cred->setGeometry(10,0,100,50);
+    cred->setText(QString::number(creditos));
 
     // make the newly created scene the scene to visualize (since Game is a QGraphicsView Widget,
     // it can be used to visualize scenes)
@@ -451,6 +455,7 @@ Game::Game(QWidget *parent){
     btnI2->setPos(90,gapy+720);
     scene->addItem(btnI2);
     buttonsL.append(btnI2);
+    maze[0][4]=1;
 
     btnI3->setPos(180,gapy+720);
     scene->addItem(btnI3);
@@ -525,7 +530,6 @@ Game::Game(QWidget *parent){
     buttonsL.append(btnJ10);
 
 
-
     // make/connect a timer to move() the bullet every so often
     QTimer * timer1 = new QTimer(this);
     connect(timer1,&QTimer::timeout,this,&Game::detectZombie);
@@ -538,6 +542,12 @@ Game::Game(QWidget *parent){
 
     // start the timer
     timer2->start(1000);
+
+    QTimer * timer3 = new QTimer(this);
+    connect(timer3,&QTimer::timeout,this,&Game::detectaOleada);
+
+    // start the timer
+    timer3->start(100);
 
 
 }
@@ -589,69 +599,108 @@ void Game::detectZombie() {
 
 void Game::cool() {
     flag=false;
+    cred->setText(QString::number(creditos));
 }
-/*
- *
 
-    //PROCESO EVOLUTIVO
-
-
-    //Primera Generación
-
-    cout << "\n";
-    cout << "PRIMERA GENERACIÓN" << "\n";
-    cout << "\n";
-
-
-
-    //Engine.Evolucion(PrimeraGen);
-
-    cout << "SEGUNDA GENERACIÓN" << "\n";
-    cout << "\n";
-
-    //Población inicial / Primera Generación
-    for (int i = 0; i < 10; i++){
-        cout << "" << "\n";
-        SegundaGen[i].Estadisticas();   //Creo objetos tipo estudiantes almacenados en un array
+void Game::detectaOleada() {
+    if (zombieL.length()<1){
+        switch(oleada){
+            case 1:
+                for (int i = 0; i < 10; i++){
+                    Zombie *z = new Zombie(PrimeraGen[i],1,PrimeraGen[i].getEsI());
+                    solver1.Backtracking_Search(maze,0,0);
+                    L=QList <string>();
+                    for (int a=0;a<solver1.get_path()->size();a++){
+                        L.append(solver1.get_path()->get_index(a));
+                    }
+                    z->setRuta(L);
+                    zombieL.append(z);
+                    scene->addItem(z);
+                }
+                oleada+=1;
+                break;
+            case 2:
+                for (int i = 0; i < 10; i++){
+                    Zombie *z = new Zombie(SegundaGen[i],1,SegundaGen[i].getEsI());
+                    Pair src = make_pair(rand()%9, 0);
+                    Pair dest = make_pair(rand()%9, 9);
+                    solver.aStarSearch(maze, src, dest);
+                    L=QList <string>();
+                    for (int a=0;a<solver.get_path()->size();a++){
+                        L.append(solver.get_path()->get_index(a));
+                    }
+                    z->setRuta(L);
+                    zombieL.append(z);
+                    scene->addItem(z);
+                }
+                oleada+=1;
+                break;
+            case 3:
+                for (int i = 0; i < 10; i++){
+                    Zombie *z = new Zombie(TerceraGen[i],1,TerceraGen[i].getEsI());
+                    Pair src = make_pair(rand()%9, 0);
+                    Pair dest = make_pair(rand()%9, 9);
+                    solver.aStarSearch(maze, src, dest);
+                    L=QList <string>();
+                    for (int a=0;a<solver.get_path()->size();a++){
+                        L.append(solver.get_path()->get_index(a));
+                    }
+                    z->setRuta(L);
+                    zombieL.append(z);
+                    scene->addItem(z);
+                }
+                oleada+=1;
+                break;
+            case 4:
+                for (int i = 0; i < 10; i++){
+                    Zombie *z = new Zombie(CuartaGen[i],1,CuartaGen[i].getEsI());
+                    Pair src = make_pair(rand()%9, 0);
+                    Pair dest = make_pair(rand()%9, 9);
+                    solver.aStarSearch(maze, src, dest);
+                    L=QList <string>();
+                    for (int a=0;a<solver.get_path()->size();a++){
+                        L.append(solver.get_path()->get_index(a));
+                    }
+                    z->setRuta(L);
+                    zombieL.append(z);
+                    scene->addItem(z);
+                }
+                oleada+=1;
+                break;
+            case 5:
+                for (int i = 0; i < 10; i++){
+                    Zombie *z = new Zombie(QuintaGen[i],1,QuintaGen[i].getEsI());
+                    Pair src = make_pair(rand()%9, 0);
+                    Pair dest = make_pair(rand()%9, 9);
+                    solver.aStarSearch(maze, src, dest);
+                    L=QList <string>();
+                    for (int a=0;a<solver.get_path()->size();a++){
+                        L.append(solver.get_path()->get_index(a));
+                    }
+                    z->setRuta(L);
+                    zombieL.append(z);
+                    scene->addItem(z);
+                }
+                oleada+=1;
+                break;
+            case 6:
+                //Fin juego
+                break;
+        }
     }
 
-    //Engine.Evolucion(SegundaGen);
+}
 
-    cout << "\n";
-    cout << "TERCERA GENERACIÓN" << "\n";
-    cout << "\n";
+void Game::paso() {
+    if (modo==0){
+        QMessageBox mens = QMessageBox();
+        mens.setText("Game Over");
+        mens.exec();
+        close();
+    }else{
 
-    //Población inicial / Primera Generación
-    for (int i = 0; i < 10; i++){
-        cout << "" << "\n";
-        TerceraGen[i].Estadisticas();   //Creo objetos tipo estudiantes almacenados en un array
     }
-
-    //Engine.Evolucion(TerceraGen);
-
-    cout << "\n";
-    cout << "CUARTA GENERACIÓN" << "\n";
-    cout << "\n";
-
-    //Población inicial / Primera Generación
-    for (int i = 0; i < 10; i++){
-        cout << "" << "\n";
-        CuartaGen[i].Estadisticas();   //Creo objetos tipo estudiantes almacenados en un array
-    }
-
-    //Engine.Evolucion(CuartaGen);
-
-    cout << "\n";
-    cout << "QUINTA GENERACIÓN" << "\n";
-    cout << "\n";
-
-    //Población inicial / Primera Generación
-    for (int i = 0; i < 10; i++){
-        cout << "" << "\n";
-        QuintaGen[i].Estadisticas();   //Creo objetos tipo estudiantes almacenados en un array
-    }
-
-    //Engine.Evolucion(QuintaGen);*/
+}
 
 
 

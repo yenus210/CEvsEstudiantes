@@ -12,18 +12,16 @@
 using namespace std;
 class Cuadro: public QObject, public QGraphicsPixmapItem{
 public:
-    //! @brief Constructor del campo/matriz del juego
-    //! \param parent
+
     Cuadro(QGraphicsItem * parent=0);
-    //! Evento al presiona el botón de l mouse
-    //! \param event
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     bool ocupado = false;
     int rango = 1;
-
-    //! @brief maneja los disparos
-    //! \param dir dirección de los disparos
     void fire(int dir);
+    void actMatriz();
+    int xm=0;
+    int ym=0;
+
 
 };
 

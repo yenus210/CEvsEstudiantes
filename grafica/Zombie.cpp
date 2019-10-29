@@ -12,11 +12,10 @@
 extern Game * game;
 extern Menu * menu;
 
-Zombie::Zombie(int ventana,int zombie, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
-    zombienum=zombie;
+Zombie::Zombie(Estudiantes est,int ventana,int zombie, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
+    zombienum=zombie+1;
     ventanaN=ventana;
-    //set random x position
-
+    estud=est;
 
     if (ventana ==0){
         random = rand() % 5;
@@ -27,7 +26,6 @@ Zombie::Zombie(int ventana,int zombie, QGraphicsItem *parent): QObject(), QGraph
         L={10,100,190,280,370,460,550,640,730,820};
         setPos(L.at(random),950);
     }
-
 
     // drew the rect
     switch(zombienum) {
@@ -161,6 +159,7 @@ int Zombie::move(){
             scene()->removeItem(this);
             game->zombieL.removeOne(this);
             menu->zombieL.removeOne(this);
+            game->paso();
             delete this;
         }
     }

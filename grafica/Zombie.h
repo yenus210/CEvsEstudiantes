@@ -8,21 +8,19 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 #include <QGraphicsItem>
+#include "../genetico/Estudiantes.h"
+
 using namespace std;
 class Zombie: public QObject, public QGraphicsPixmapItem{
 public:
-    //! Coloca al zombie en una posición random para entrar en la matriz y le asigna la imagen
-    //! \param ventana
-    //! \param zombie
-    //! \param parent
-    Zombie(int ventana, int zombie, QGraphicsItem * parent=0);
+    Zombie(Estudiantes est=Estudiantes(), int ventana=0, int zombie=0, QGraphicsItem * parent=0);
     void setRuta(QList<string> lista );
     int *gapy =new int(50);
+    Estudiantes estud;
 
 private:
-    //!Permite el movimiento del zombie por la matriz y les asiga la ruta que debe seguir cada tipo
-    //! \return
     int move();
+
     QList <int> destinoX = QList<int> {};
     QList <int> destinoY = QList<int> {};
     QList <int> L = QList<int> {};

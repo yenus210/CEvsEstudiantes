@@ -40,21 +40,30 @@ void Menu::mousePressEvent(QMouseEvent *event) {
 }
 
 void Menu::handlebtn1() {
-    game->show();
     for (QGraphicsItem * zomb:zombieL){
         scene->removeItem(zomb);
         delete zomb;
     }
     close();
+    game->oleada=1;
+    game->modo=0;
+    game->show();
 }
 
 void Menu::handlebtn2() {
-
+    for (QGraphicsItem * zomb:zombieL){
+        scene->removeItem(zomb);
+        delete zomb;
+    }
+    close();
+    game->oleada=1;
+    game->modo=1;
+    game->show();
 }
 void Menu::genZomb() {
 
     int random = rand() % 5;
-    Zombie *z = new Zombie(0,random);
+    Zombie *z = new Zombie(Estudiantes(),0,random);
     zombieL.append(z);
     QList<string> List = {"Menu"};
     z->setRuta(List);

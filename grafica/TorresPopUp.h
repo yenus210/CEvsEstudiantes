@@ -9,6 +9,7 @@
 #include <QGraphicsScene>
 #include <QtWidgets/QPushButton>
 #include "Cuadro.h"
+#include <QMessageBox>
 
 using namespace std;
 //! Clase que crea las torres

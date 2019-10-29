@@ -7,6 +7,8 @@
 #include <QTimer>
 #include <QList>
 #include "Cuadro.h"
+#include "Zombie.h"
+
 
 class Bullet: public QObject,public QGraphicsPixmapItem {
 public:
