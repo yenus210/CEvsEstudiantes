@@ -7,6 +7,7 @@
 #include <QGraphicsItem>
 #include <QObject>
 #include <QTimer>
+#include <QDebug>
 
 
 using namespace std;
@@ -21,7 +22,7 @@ public:
     void actMatriz();
     int xm=0;
     int ym=0;
-QString iD;
+    QString iD;
 
 
 };

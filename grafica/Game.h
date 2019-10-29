@@ -37,7 +37,7 @@ public:
 
 private:
 
-    QLabel *cred;
+
     //Arreglo inicial de 10 estudiantes con el que comenzará la población
     Estudiantes PrimeraGen[10];
     Estudiantes SegundaGen[10];
@@ -56,6 +56,7 @@ private:
     void cool();
     bool flag=false;
 
+    QLabel *cred;
     Cuadro* btnA1;
     Cuadro* btnA2;
     Cuadro* btnA3;

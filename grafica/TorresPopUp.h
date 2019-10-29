@@ -31,7 +31,7 @@ private:
     void handletorre3();
     //!@brief maneja la torre 4, la coloca y asigna el espacio como ocupado
     void handletorre4();
-    Cuadro* C = new Cuadro("");
+    Cuadro* C;
 public:
     void setC(Cuadro *c);
 

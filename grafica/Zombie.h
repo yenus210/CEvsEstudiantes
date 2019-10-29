@@ -35,7 +35,7 @@ private:
     int cont=1;
 
 
-
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 };
 
 

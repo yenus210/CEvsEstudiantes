@@ -9,7 +9,7 @@ extern Game * game;
 
 Cuadro::Cuadro(QString id, QGraphicsItem *parent) {
     setPixmap(QPixmap("../art/block.png"));
-id=iD;
+    iD=id;
 
 }
 
@@ -28,52 +28,50 @@ void Cuadro::fire(int dir) {
 
 void Cuadro::actMatriz() {
 
-    if(iD.front()== "J"){
+    if(iD.contains("J")){
         xm=0;
-    }else if(iD.front()== "I"){
+    }else if(iD.contains( "I")){
         xm=1;
-    }else if(iD.front()== "H"){
+    }else if(iD.contains("H")){
         xm=2;
-    }else if(iD.front()== "G"){
+    }else if(iD.contains("G")){
         xm=3;
-    }else if(iD.front()== "F"){
+    }else if(iD.contains("F")){
         xm=4;
-    }else if(iD.front()== "E"){
+    }else if(iD.contains("E")){
         xm=5;
-    }else if(iD.front()== "D"){
+    }else if(iD.contains("D")){
         xm=6;
-    }else if(iD.front()== "C"){
+    }else if(iD.contains("C")){
         xm=7;
-    }else if(iD.front()== "B"){
+    }else if(iD.contains("B")){
         xm=8;
-    }else if(iD.front()== "A"){
+    }else if(iD.contains("A")){
         xm=9;
     }
 
-    if(objectName().contains("1")){
+    if(iD.contains("1")){
         ym=0;
     }
-    else if(objectName().contains("2")){
+    else if(iD.contains("2")){
         ym=1;
-    }else if(objectName().contains("3")){
+    }else if(iD.contains("3")){
         ym=2;
-    }else if(objectName().contains("4")){
+    }else if(iD.contains("4")){
         ym=3;
-    }else if(objectName().contains("5")){
+    }else if(iD.contains("5")){
         ym=4;
-    }else if(objectName().contains("6")){
+    }else if(iD.contains("6")){
         ym=5;
-    }else if(objectName().contains("7")){
+    }else if(iD.contains("7")){
         ym=6;
-    }else if(objectName().contains("8")){
+    }else if(iD.contains("8")){
         ym=7;
-    }else if(objectName().contains("9")){
+    }else if(iD.contains("9")){
         ym=8;
-    }else if(objectName().contains("10")){
+    }else if(iD.contains("10")){
         ym=9;
     }
-    cout << xm << ym << endl;
-    cout << iD.toStdString().c_str() << endl;
 
     game->maze[xm][ym]=1;
 }

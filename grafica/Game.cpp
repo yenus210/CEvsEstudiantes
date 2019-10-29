@@ -689,7 +689,10 @@ void Game::detectaOleada() {
                 oleada+=1;
                 break;
             case 6:
-                //Fin juego
+                close();
+                QMessageBox mens = QMessageBox();
+                mens.setText("Victory Royale");
+                mens.exec();
                 break;
         }
     }
@@ -698,10 +701,12 @@ void Game::detectaOleada() {
 
 void Game::paso() {
     if (modo==0){
+        close();
         QMessageBox mens = QMessageBox();
         mens.setText("Game Over");
         mens.exec();
-        close();
+        modo=-1;
+
     }else{
 
     }
