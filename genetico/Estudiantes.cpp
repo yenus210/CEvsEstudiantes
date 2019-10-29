@@ -18,7 +18,7 @@ Estudiantes::Estudiantes() {
     res_art = rand() % 3 + 1;
     res_lan = rand() % 3 + 1;
     vid = rand() % 3 + 1;
-    id = rand() % 3 + 0;
+    id = rand() % 4 + 0;
 
     //Atributos asociados a los ogros
     velocidad = vel;
