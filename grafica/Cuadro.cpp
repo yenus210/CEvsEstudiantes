@@ -28,25 +28,25 @@ void Cuadro::fire(int dir) {
 
 void Cuadro::actMatriz() {
 
-    if(objectName().contains("j")){
+    if(iD.front()== "J"){
         xm=0;
-    }else if(objectName().contains("i")){
+    }else if(iD.front()== "I"){
         xm=1;
-    }else if(objectName().contains("h")){
+    }else if(iD.front()== "H"){
         xm=2;
-    }else if(objectName().contains("g")){
+    }else if(iD.front()== "G"){
         xm=3;
-    }else if(objectName().contains("f")){
+    }else if(iD.front()== "F"){
         xm=4;
-    }else if(objectName().contains("e")){
+    }else if(iD.front()== "E"){
         xm=5;
-    }else if(objectName().contains("d")){
+    }else if(iD.front()== "D"){
         xm=6;
-    }else if(objectName().contains("c")){
+    }else if(iD.front()== "C"){
         xm=7;
-    }else if(objectName().contains("b")){
+    }else if(iD.front()== "B"){
         xm=8;
-    }else if(objectName().contains("a")){
+    }else if(iD.front()== "A"){
         xm=9;
     }
 
@@ -73,7 +73,7 @@ void Cuadro::actMatriz() {
         ym=9;
     }
     cout << xm << ym << endl;
-    cout << this->objectName().toStdString().c_str() << endl;
+    cout << iD.toStdString().c_str() << endl;
 
     game->maze[xm][ym]=1;
 }
