@@ -13,7 +13,7 @@ using namespace std;
 class Cuadro: public QObject, public QGraphicsPixmapItem{
 public:
 
-    Cuadro(QGraphicsItem * parent=0);
+    Cuadro(QString id, QGraphicsItem * parent=0);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     bool ocupado = false;
     int rango = 1;
@@ -21,6 +21,7 @@ public:
     void actMatriz();
     int xm=0;
     int ym=0;
+QString iD;
 
 
 };
