@@ -560,6 +560,7 @@ void Game::mousePressEvent(QMouseEvent *event) {
 }
 
 void Game::detectZombie() {
+    cred->setText(QString::number(creditos));
     if (!flag){
     for (Cuadro *item:buttonsL ){
         if (item->ocupado){
@@ -599,7 +600,7 @@ void Game::detectZombie() {
 
 void Game::cool() {
     flag=false;
-    cred->setText(QString::number(creditos));
+
 }
 
 void Game::detectaOleada() {
@@ -608,8 +609,7 @@ void Game::detectaOleada() {
             case 1:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(PrimeraGen[i],1,PrimeraGen[i].getEsI());
-                    int y= rand()%9;
-                    solver1.Backtracking_Search(maze,0,y);
+                    solver1.Backtracking_Search(maze,0,i);
                     L=QList <string>();
                     for (int a=0;a<solver1.get_path()->size();a++){
                         L.append(solver1.get_path()->get_index(a));
