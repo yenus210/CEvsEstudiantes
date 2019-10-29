@@ -608,7 +608,8 @@ void Game::detectaOleada() {
             case 1:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(PrimeraGen[i],1,PrimeraGen[i].getEsI());
-                    solver1.Backtracking_Search(maze,0,0);
+                    int y= rand()%9;
+                    solver1.Backtracking_Search(maze,0,y);
                     L=QList <string>();
                     for (int a=0;a<solver1.get_path()->size();a++){
                         L.append(solver1.get_path()->get_index(a));
@@ -622,8 +623,9 @@ void Game::detectaOleada() {
             case 2:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(SegundaGen[i],1,SegundaGen[i].getEsI());
-                    Pair src = make_pair(rand()%9, 0);
-                    Pair dest = make_pair(rand()%9, 9);
+                    int y= rand()%9;
+                    Pair src = make_pair(0, y);
+                    Pair dest = make_pair(9, y);
                     solver.aStarSearch(maze, src, dest);
                     L=QList <string>();
                     for (int a=0;a<solver.get_path()->size();a++){
@@ -638,8 +640,9 @@ void Game::detectaOleada() {
             case 3:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(TerceraGen[i],1,TerceraGen[i].getEsI());
-                    Pair src = make_pair(rand()%9, 0);
-                    Pair dest = make_pair(rand()%9, 9);
+                    int y= rand()%9;
+                    Pair src = make_pair(0, y);
+                    Pair dest = make_pair(9, y);
                     solver.aStarSearch(maze, src, dest);
                     L=QList <string>();
                     for (int a=0;a<solver.get_path()->size();a++){
@@ -654,8 +657,9 @@ void Game::detectaOleada() {
             case 4:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(CuartaGen[i],1,CuartaGen[i].getEsI());
-                    Pair src = make_pair(rand()%9, 0);
-                    Pair dest = make_pair(rand()%9, 9);
+                    int y= rand()%9;
+                    Pair src = make_pair(0, y);
+                    Pair dest = make_pair(9, y);
                     solver.aStarSearch(maze, src, dest);
                     L=QList <string>();
                     for (int a=0;a<solver.get_path()->size();a++){
@@ -670,8 +674,9 @@ void Game::detectaOleada() {
             case 5:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(QuintaGen[i],1,QuintaGen[i].getEsI());
-                    Pair src = make_pair(rand()%9, 0);
-                    Pair dest = make_pair(rand()%9, 9);
+                    int y= rand()%9;
+                    Pair src = make_pair(0, y);
+                    Pair dest = make_pair(9, y);
                     solver.aStarSearch(maze, src, dest);
                     L=QList <string>();
                     for (int a=0;a<solver.get_path()->size();a++){

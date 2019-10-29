@@ -12,7 +12,7 @@ Backtracking::Backtracking(){
 // Metodo inicial de la funcion
 
 Lista * Backtracking::get_path(){
-    strpath->print_lista();
+    //strpath->print_lista();
     return strpath;
 
 }

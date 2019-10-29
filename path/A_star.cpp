@@ -12,7 +12,7 @@ bool A_star::isValid(int row, int col)
     (col >= 0) && (col < COL);
 }
 Lista * A_star::get_path(){
-    strpath->print_lista();
+    //strpath->print_lista();
     return strpath;
 }
 
