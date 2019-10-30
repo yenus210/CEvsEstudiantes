@@ -3,9 +3,10 @@
 
 extern Game * game; // there is an external global object called game
 
-Bullet::Bullet(int dir, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
+Bullet::Bullet(int torre,int dir, QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
     // draw graphics}
     direccion=dir;
+    tirador=torre;
     QPixmap a=QPixmap("../art/quest1.png");
     QPixmap pixb = a.scaled(45, 45, Qt::IgnoreAspectRatio);
     setPixmap(pixb);
@@ -90,8 +91,21 @@ void Bullet::move(){
     for (int i = 0, n = colliding_items.size(); i < n; ++i){
         if (typeid(*(colliding_items[i])) == typeid(Zombie)){
 
-            ((Zombie*)colliding_items[i])->estud.setVida(((Zombie*)colliding_items[i])->estud.getVida()-1);
-            if(((Zombie*)colliding_items[i])->estud.getVida()==0){
+            switch(tirador){
+                case 1:
+                    ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-0.7);
+                    break;
+                case 2:
+                    ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-1);
+                    break;
+                case 3:
+                    ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-1.5);
+                    break;
+                case 4:
+                    ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-2);
+                    break;
+            }
+            if(((Zombie*)colliding_items[i])->estud.getVid()<0){
                 scene()->removeItem(colliding_items[i]);
                 game->zombieL.removeOne(colliding_items[i]);
                 delete colliding_items[i];

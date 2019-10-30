@@ -15,13 +15,14 @@ public:
     //! Maneja las colisiones de los disparos
     //! \param dir coordenadas del disparo
     //! \param parent
-    Bullet(int dir,  QGraphicsItem * parent=0);
+    Bullet(int torre,int dir,  QGraphicsItem * parent=0);
     //! Maneja el movimiento del disparo
     void move();
 private:
     int cont =1;
     int direccion =0;
     int contDist =0;
+    int tirador;
 
 };
 

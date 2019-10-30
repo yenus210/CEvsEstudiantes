@@ -65,7 +65,7 @@ Estudiantes::Estudiantes() {
 
     //Función para imprimir todas las caracteristicas de cada uno de los estudiantes
     void  Estudiantes::Estadisticas (){
-        cout << "Vida: " << getVida( ) <<"\n";
+        cout << "Vida: " << getVid( ) <<"\n";
         cout <<"Res_Arqueros: "<< getResArqueros() << "\n";
         cout <<"Res_Magos: "<< getResMagos() << "\n";
         cout <<"Res_Artilleros: " << getResArtilleros() << "\n";
@@ -128,16 +128,19 @@ void Estudiantes::setVelocidad(int velocidad) {
 }
 
 
-int Estudiantes::getVida() const {
-    return vida;
-}
-void Estudiantes::setVida(int vida) {
-    Estudiantes::vida = vida;
-}
+
 
 
 int Estudiantes::getEsI() const {
     return es_i;
+}
+
+double Estudiantes::getVid() const {
+    return vid;
+}
+
+void Estudiantes::setVid(double vid) {
+    Estudiantes::vid = vid;
 }
 
 

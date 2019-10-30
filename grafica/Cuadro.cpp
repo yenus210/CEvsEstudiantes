@@ -20,7 +20,7 @@ void Cuadro::mousePressEvent(QGraphicsSceneMouseEvent *event) {
 }
 
 void Cuadro::fire(int dir) {
-    Bullet *b=new Bullet(dir);
+    Bullet *b=new Bullet(torre,dir);
     b->setPos(this->x()+22,this->y()+22);
     scene()->addItem(b);
 

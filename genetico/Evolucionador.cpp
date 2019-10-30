@@ -95,12 +95,12 @@ using namespace std;
                             nuevoes[hijo].setResMagos(padre1.getResMagos());
                             nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                             nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                            nuevoes[hijo].setVida(padre2.getVida());
+                            nuevoes[hijo].setVid(padre2.getVid());
                             if (mutante == 0) {
 
                                 cout << ("Habrá Mutación");
                                 nuevoes[hijo].setVelocidad(5);
-                                nuevoes[hijo].setVida(5);
+                                nuevoes[hijo].setVid(5);
                             }
                             nuevoes[hijo].Estadisticas();
                             break;
@@ -113,12 +113,12 @@ using namespace std;
                             nuevoes[hijo].setResMagos(padre1.getResMagos());
                             nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                             nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                            nuevoes[hijo].setVida(padre2.getVida());
+                            nuevoes[hijo].setVid(padre2.getVid());
                             if (mutante == 1) {
 
                                 cout << ("Habrá Mutación");
                                 nuevoes[hijo].setVelocidad(5);
-                                nuevoes[hijo].setVida(5);
+                                nuevoes[hijo].setVid(5);
                             }
                             nuevoes[hijo].Estadisticas();
                             nuevoes[hijo].Estadisticas();
@@ -132,12 +132,12 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 2) {
 
                             cout << ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -150,11 +150,11 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 3) {
                             cout << ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -167,12 +167,12 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 4) {
                             cout << ("Habrá Mutación");
                             ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -185,13 +185,13 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 5) {
 
                             cout << ("Habrá Mutación");
                             ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -204,13 +204,13 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 6) {
 
                             cout << ("Habrá Mutación");
                             ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -223,13 +223,13 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 7) {
 
                             cout << ("Habrá Mutación");
                             ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -242,13 +242,13 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 8) {
 
                             cout << ("Habrá Mutación");
                             ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         break;
@@ -261,13 +261,13 @@ using namespace std;
                         nuevoes[hijo].setResMagos(padre1.getResMagos());
                         nuevoes[hijo].setResArtilleros(padre2.getResArtilleros());
                         nuevoes[hijo].setResLanzafuego(padre2.getResLanzafuego());
-                        nuevoes[hijo].setVida(padre2.getVida());
+                        nuevoes[hijo].setVid(padre2.getVid());
                         if (mutante == 9) {
 
                             cout << ("Habrá Mutación");
                             ("Habrá Mutación");
                             nuevoes[hijo].setVelocidad(5);
-                            nuevoes[hijo].setVida(5);
+                            nuevoes[hijo].setVid(5);
                         }
                         nuevoes[hijo].Estadisticas();
                         //System.out.println("Hijo " + hijo + "creado" );

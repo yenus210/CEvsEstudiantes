@@ -23,7 +23,13 @@ private:
     int res_mag;
     int res_art;
     int res_lan;
-    int vid;
+    double vid;
+public:
+    double getVid() const;
+
+    void setVid(double vid);
+
+private:
     int id;
 
     //Atributos asociados a los ogros
@@ -78,10 +84,6 @@ public:
 
     void setResLanzafuego(int resLanzafuego);
 
-
-    int getVida() const;
-
-    void setVida(int vida);
 
 };
 
