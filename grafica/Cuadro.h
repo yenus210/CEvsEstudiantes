@@ -23,6 +23,7 @@ public:
     int xm=0;
     int ym=0;
     QString iD;
+    int torre;
 
 
 };

@@ -702,6 +702,7 @@ void Game::detectaOleada() {
         }
     }
 
+
 }
 
 void Game::paso() {

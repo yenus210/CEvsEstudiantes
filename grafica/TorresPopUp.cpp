@@ -71,6 +71,7 @@ void TorresPopUp::handletorre1() {
             C->setPixmap(pixb);
             C->ocupado = true;
             C->actMatriz();
+            C->torre=1;
             game->creditos -= 5;
 
         }
@@ -98,6 +99,7 @@ void TorresPopUp::handletorre2() {
             C->setPixmap(pixb);
             C->ocupado = true;
             C->actMatriz();
+            C->torre=2;
             game->creditos -= 10;
 
         }
@@ -125,6 +127,7 @@ void TorresPopUp::handletorre3() {
             C->setPixmap(pixb);
             C->ocupado = true;
             C->actMatriz();
+            C->torre=3;
             game->creditos -= 15;
         }
         close();
@@ -150,6 +153,7 @@ void TorresPopUp::handletorre4() {
             C->setPixmap(pixb);
             C->ocupado = true;
             C->actMatriz();
+            C->torre=4;
             game->creditos -= 20;
         }
         close();
