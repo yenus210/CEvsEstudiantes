@@ -62,17 +62,24 @@ void TorresPopUp::handletorre1() {
     }else {
         if (C->ocupado){
             if (game->creditos < 0) {
+                close();
                 QMessageBox mens = QMessageBox();
                 mens.setText("No dispone de suficientes creditos");
                 mens.exec();
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 1;
-                game->creditos -= 0;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 1;
+                    game->creditos -= 0;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
+
 
             }
         }else {
@@ -83,11 +90,16 @@ void TorresPopUp::handletorre1() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 1;
-                game->creditos -= 5;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 1;
+                    game->creditos -= 5;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
 
             }
         }
@@ -113,11 +125,16 @@ void TorresPopUp::handletorre2() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 2;
-                game->creditos -= 5;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 2;
+                    game->creditos -= 5;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
             }
         }else {
             if (game->creditos < 10) {
@@ -127,11 +144,16 @@ void TorresPopUp::handletorre2() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 2;
-                game->creditos -= 10;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 2;
+                    game->creditos -= 10;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
 
             }
         }
@@ -157,11 +179,16 @@ void TorresPopUp::handletorre3() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 3;
-                game->creditos -= 10;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 3;
+                    game->creditos -= 10;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
             }
         }else {
             if (game->creditos < 15) {
@@ -171,11 +198,16 @@ void TorresPopUp::handletorre3() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 3;
-                game->creditos -= 15;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 3;
+                    game->creditos -= 15;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
             }
         }
         close();
@@ -199,11 +231,16 @@ void TorresPopUp::handletorre4() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 4;
-                game->creditos -= 15;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 4;
+                    game->creditos -= 15;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
             }
         }else {
             if (game->creditos < 20) {
@@ -213,11 +250,16 @@ void TorresPopUp::handletorre4() {
             } else {
                 QPixmap pixa(torre.c_str());
                 QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-                C->setPixmap(pixb);
-                C->ocupado = true;
-                C->actMatriz();
-                C->torre = 4;
-                game->creditos -= 20;
+                if(C->ocupar()){
+                    C->setPixmap(pixb);
+                    C->torre = 4;
+                    game->creditos -= 20;
+                }else{
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("No puede cerrar el camino");
+                    mens.exec();
+                }
             }
         }
         close();

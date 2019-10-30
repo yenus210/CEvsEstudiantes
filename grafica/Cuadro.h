@@ -24,6 +24,7 @@ public:
     int ym=0;
     QString iD;
     int torre;
+    bool ocupar();
 
 
 };
