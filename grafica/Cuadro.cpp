@@ -14,9 +14,9 @@ Cuadro::Cuadro(QString id, QGraphicsItem *parent) {
 }
 
 void Cuadro::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-    auto* popUp=new TorresPopUp();
+    TorresPopUp* popUp = new TorresPopUp();
     popUp->show();
-    popUp->setC(this);
+    popUp->C=this;
 }
 
 void Cuadro::fire(int dir) {

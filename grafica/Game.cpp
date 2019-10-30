@@ -623,9 +623,9 @@ void Game::detectaOleada() {
             case 2:
                 for (int i = 0; i < 10; i++){
                     Zombie *z = new Zombie(SegundaGen[i],1,SegundaGen[i].getEsI());
-                    int y= rand()%9;
-                    Pair src = make_pair(0, y);
-                    Pair dest = make_pair(9, y);
+
+                    Pair src = make_pair(0, i);
+                    Pair dest = make_pair(9, i);
                     solver.aStarSearch(maze, src, dest);
                     L=QList <string>();
                     for (int a=0;a<solver.get_path()->size();a++){
@@ -686,14 +686,19 @@ void Game::detectaOleada() {
                     zombieL.append(z);
                     scene->addItem(z);
                 }
-                oleada+=1;
+                if (modo==0){
+                    oleada+=1;
+                }else{}
                 break;
             case 6:
-                close();
-                QMessageBox mens = QMessageBox();
-                mens.setText("Victory Royale");
-                mens.exec();
-                break;
+                if (modo==0){
+                    close();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("Game Over");
+                    mens.exec();
+                    modo=-1;
+                }else{
+                }
         }
     }
 
@@ -705,7 +710,7 @@ void Game::paso() {
         QMessageBox mens = QMessageBox();
         mens.setText("Game Over");
         mens.exec();
-        modo=-1;
+        modo=100;
 
     }else{
 
