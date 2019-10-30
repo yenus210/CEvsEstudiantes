@@ -60,20 +60,36 @@ void TorresPopUp::handletorre1() {
         mens.exec();
 
     }else {
+        if (C->ocupado){
+            if (game->creditos < 0) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 1;
+                game->creditos -= 0;
 
-        if (game->creditos < 5) {
-            QMessageBox mens = QMessageBox();
-            mens.setText("No dispone de suficientes creditos");
-            mens.exec();
-        } else {
-            QPixmap pixa(torre.c_str());
-            QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-            C->setPixmap(pixb);
-            C->ocupado = true;
-            C->actMatriz();
-            C->torre=1;
-            game->creditos -= 5;
+            }
+        }else {
+            if (game->creditos < 5) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 1;
+                game->creditos -= 5;
 
+            }
         }
         close();
     }
@@ -89,19 +105,35 @@ void TorresPopUp::handletorre2() {
         mens.exec();
 
     } else {
-        if (game->creditos < 10) {
-            QMessageBox mens = QMessageBox();
-            mens.setText("No dispone de suficientes creditos");
-            mens.exec();
-        } else {
-            QPixmap pixa(torre.c_str());
-            QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-            C->setPixmap(pixb);
-            C->ocupado = true;
-            C->actMatriz();
-            C->torre=2;
-            game->creditos -= 10;
+        if (C->ocupado){
+            if (game->creditos < 5) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 2;
+                game->creditos -= 5;
+            }
+        }else {
+            if (game->creditos < 10) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 2;
+                game->creditos -= 10;
 
+            }
         }
         close();
     }
@@ -117,18 +149,34 @@ void TorresPopUp::handletorre3() {
         mens.exec();
 
     } else {
-        if (game->creditos < 15) {
-            QMessageBox mens = QMessageBox();
-            mens.setText("No dispone de suficientes creditos");
-            mens.exec();
-        } else {
-            QPixmap pixa(torre.c_str());
-            QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-            C->setPixmap(pixb);
-            C->ocupado = true;
-            C->actMatriz();
-            C->torre=3;
-            game->creditos -= 15;
+        if (C->ocupado){
+            if (game->creditos < 10) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 3;
+                game->creditos -= 10;
+            }
+        }else {
+            if (game->creditos < 15) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 3;
+                game->creditos -= 15;
+            }
         }
         close();
     }
@@ -143,18 +191,34 @@ void TorresPopUp::handletorre4() {
         mens.exec();
 
     } else {
-        if (game->creditos < 20) {
-            QMessageBox mens = QMessageBox();
-            mens.setText("No dispone de suficientes creditos");
-            mens.exec();
-        } else {
-            QPixmap pixa(torre.c_str());
-            QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
-            C->setPixmap(pixb);
-            C->ocupado = true;
-            C->actMatriz();
-            C->torre=4;
-            game->creditos -= 20;
+        if (C->ocupado){
+            if (game->creditos < 15) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 4;
+                game->creditos -= 15;
+            }
+        }else {
+            if (game->creditos < 20) {
+                QMessageBox mens = QMessageBox();
+                mens.setText("No dispone de suficientes creditos");
+                mens.exec();
+            } else {
+                QPixmap pixa(torre.c_str());
+                QPixmap pixb = pixa.scaled(90, 90, Qt::IgnoreAspectRatio);
+                C->setPixmap(pixb);
+                C->ocupado = true;
+                C->actMatriz();
+                C->torre = 4;
+                game->creditos -= 20;
+            }
         }
         close();
     }

@@ -599,6 +599,7 @@ void Zombie::setRuta(QList<string> lista) {
 }
 
 void Zombie::mousePressEvent(QGraphicsSceneMouseEvent *event) {
+    game->stats(this->estud);
 }
 
 

@@ -93,7 +93,7 @@ void Bullet::move(){
 
             switch(tirador){
                 case 1:
-                    ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-0.7);
+                    ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-0.6);
                     break;
                 case 2:
                     ((Zombie*)colliding_items[i])->estud.setVid(((Zombie*)colliding_items[i])->estud.getVid()-1);

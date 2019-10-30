@@ -9,7 +9,28 @@ Game::Game(QWidget *parent){
     int gapy=50;
     cred=new QLabel(this);
     cred->setGeometry(10,0,100,50);
-    cred->setText(QString::number(creditos));
+    cred->setText("Creditos: "+QString::number(creditos));
+    QPalette palette;
+    palette.setColor(QPalette::Text, Qt::white);
+    cred->setPalette(palette);
+
+    tipo=new QLabel(this);
+    tipo->setGeometry(450,0,250,50);
+    tipo->setPalette(palette);
+
+    vida=new QLabel(this);
+    vida->setGeometry(680,0,100,50);
+    vida->setPalette(palette);
+
+    velocidad=new QLabel(this);
+    velocidad->setGeometry(780,0,100,50);
+    velocidad->setPalette(palette);
+
+    olead=new QLabel(this);
+    olead->setGeometry(110,0,100,50);
+    olead->setText("Oleada: "+QString::number(oleada));
+    olead->setPalette(palette);
+
 
     // make the newly created scene the scene to visualize (since Game is a QGraphicsView Widget,
     // it can be used to visualize scenes)
@@ -17,6 +38,7 @@ Game::Game(QWidget *parent){
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(900,950);
+    scene->setBackgroundBrush(QColor(72,37,37));
 
     btnA1 = new Cuadro("A1");
     btnA2 = new Cuadro("A2");
@@ -560,7 +582,7 @@ void Game::mousePressEvent(QMouseEvent *event) {
 }
 
 void Game::detectZombie() {
-    cred->setText(QString::number(creditos));
+    cred->setText("Creditos: "+QString::number(creditos));
     if (!flag){
     for (Cuadro *item:buttonsL ){
         if (item->ocupado){
@@ -618,6 +640,7 @@ void Game::detectaOleada() {
                     zombieL.append(z);
                     scene->addItem(z);
                 }
+                olead->setText("Oleada: "+QString::number(oleada));
                 oleada+=1;
                 break;
             case 2:
@@ -635,6 +658,7 @@ void Game::detectaOleada() {
                     zombieL.append(z);
                     scene->addItem(z);
                 }
+                olead->setText("Oleada: "+QString::number(oleada));
                 oleada+=1;
                 break;
             case 3:
@@ -652,6 +676,7 @@ void Game::detectaOleada() {
                     zombieL.append(z);
                     scene->addItem(z);
                 }
+                olead->setText("Oleada: "+QString::number(oleada));
                 oleada+=1;
                 break;
             case 4:
@@ -669,6 +694,7 @@ void Game::detectaOleada() {
                     zombieL.append(z);
                     scene->addItem(z);
                 }
+                olead->setText("Oleada: "+QString::number(oleada));
                 oleada+=1;
                 break;
             case 5:
@@ -687,8 +713,11 @@ void Game::detectaOleada() {
                     scene->addItem(z);
                 }
                 if (modo==0){
+                    olead->setText("Oleada: "+QString::number(oleada));
                     oleada+=1;
-                }else{}
+                }else{
+                    olead->setText("Oleada: ∞");
+                }
                 break;
             case 6:
                 if (modo==0){
@@ -716,6 +745,29 @@ void Game::paso() {
     }else{
 
     }
+}
+
+void Game::stats(Estudiantes stud) {
+    switch(stud.getEsI()+1){
+        case 1:
+            tipo->setText("Tipo: Ogro Armado");
+            break;
+        case 2:
+            tipo->setText("Tipo: Esqueleto Oscuro");
+            break;
+        case 3:
+            tipo->setText("Tipo: Harpía Salvaje");
+            break;
+        case 4:
+            tipo->setText("Tipo: Mercenario de la URSS");
+            break;
+    }
+
+    vida->setText("Vida: "+QString::number(stud.getVid()));
+    velocidad->setText("Velocidad: "+QString::number(stud.getVelocidad()));
+
+
+
 }
 
 

@@ -32,7 +32,7 @@ public:
 
     int (*maze)[10] = (int(*)[10]) calloc(10,sizeof(*maze));
 
-
+    void stats(Estudiantes stud);
     void paso();
 
 private:
@@ -57,6 +57,10 @@ private:
     bool flag=false;
 
     QLabel *cred;
+    QLabel *vida;
+    QLabel *velocidad;
+    QLabel *tipo;
+    QLabel *olead;
     Cuadro* btnA1;
     Cuadro* btnA2;
     Cuadro* btnA3;
