@@ -28,6 +28,7 @@ public:
     int oleada=0;
     int modo=0;
     int creditos=5;
+    int zombiesPass=0;
 
 
     int (*maze)[10] = (int(*)[10]) calloc(10,sizeof(*maze));

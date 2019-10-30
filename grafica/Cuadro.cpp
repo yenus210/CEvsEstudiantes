@@ -77,15 +77,33 @@ void Cuadro::actMatriz() {
 
 bool Cuadro::ocupar() {
     actMatriz();
-    if(game->maze[xm][ym+1]==1) {
-        return false;
-    }
-    else if(game->maze[xm][ym-1]==1){
-        return false;
-    }else{
-        this->ocupado=true;
-        game->maze[xm][ym]=1;
-        return true;
+    if(ym==0){
+        if(game->maze[xm][ym+1]==1) {
+            return false;
+        }else{
+            this->ocupado=true;
+            game->maze[xm][ym]=1;
+            return true;
+        }
+
+    }else if(ym==9) {
+        if (game->maze[xm][ym-1] == 1) {
+            return false;
+        }else{
+            this->ocupado=true;
+            game->maze[xm][ym]=1;
+            return true;
+        }
+    }else {
+        if (game->maze[xm][ym+1] == 1) {
+            return false;
+        }else if (game->maze[xm][ym-1] == 1) {
+            return false;
+        } else {
+            this->ocupado = true;
+            game->maze[xm][ym] = 1;
+            return true;
+        }
     }
 
 }

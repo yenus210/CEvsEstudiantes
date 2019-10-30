@@ -2,6 +2,7 @@
 // Created by yenus on 23/10/19.
 //
 
+#include <QtWidgets/QMessageBox>
 #include "Menu.h"
 
 
@@ -25,6 +26,12 @@ Menu::Menu(QWidget *parent) {
     btn2->setFont(QFont("times",16,63));
     btn2->setGeometry(140, 250, 180 , 90);
     connect(btn2 ,&QPushButton::clicked, this, &Menu::handlebtn2);
+    btn2->setStyleSheet("QPushButton { border-image: url(../art/butBG.png); color: white;}");
+
+    btn2 = new QPushButton("Reglas",this);
+    btn2->setFont(QFont("times",16,63));
+    btn2->setGeometry(0, 0, 130 , 70);
+    connect(btn2 ,&QPushButton::clicked, this, &Menu::handlebtn3);
     btn2->setStyleSheet("QPushButton { border-image: url(../art/butBG.png); color: white;}");
 
     QTimer * timer = new QTimer(this);
@@ -69,4 +76,16 @@ void Menu::genZomb() {
     z->setRuta(List);
     z->gapy = new int (0);
     scene->addItem(z);
+}
+
+void Menu::handlebtn3() {
+    QMessageBox mens = QMessageBox();
+    mens.setText("Regla #1: No colocar dos torres una al lado de otra\n"
+                 "Regla #2: Al realizar un upgrade se reduce el precio de 5 creditos por torre\n"
+                 "Regla #3: Cada torre cuesta 5 mas que la otra empezando en 5 creditos\n"
+                 "Regla #4: No permitir el paso de estudiantes en el modo profe\n"
+                 "Regla #5: Divertirse en el modo estudiante\n"
+                 "Regla #6: No comentar los bugs encontrados en el juego\n"
+                 "Regla #7: Hacer click sobre los estudiantes para obtener sus estadisticas");
+    mens.exec();
 }

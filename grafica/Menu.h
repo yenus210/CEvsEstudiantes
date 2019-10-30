@@ -24,11 +24,13 @@ private:
     void mousePressEvent(QMouseEvent *event);
     QPushButton* btn1;
     QPushButton* btn2;
+    QPushButton* btn3;
 
     //!@brief Maneja el botón 1
     void handlebtn1();
     //!@brief Maneja el botón 2
     void handlebtn2();
+    void handlebtn3();
     //!@brief Crea la generación de zombies
     void genZomb();
 };

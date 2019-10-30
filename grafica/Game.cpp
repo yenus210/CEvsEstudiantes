@@ -712,12 +712,10 @@ void Game::detectaOleada() {
                     zombieL.append(z);
                     scene->addItem(z);
                 }
-                if (modo==0){
-                    olead->setText("Oleada: "+QString::number(oleada));
-                    oleada+=1;
-                }else{
-                    olead->setText("Oleada: ∞");
-                }
+
+                olead->setText("Oleada: "+QString::number(oleada));
+                oleada+=1;
+
                 break;
             case 6:
                 if (modo==0){
@@ -727,6 +725,12 @@ void Game::detectaOleada() {
                     mens.exec();
                     modo=-1;
                 }else{
+                    close();
+                    fcloseall();
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("Se Graduaron: "+ QString::number(zombiesPass));
+                    mens.exec();
+                    modo=-1;
                 }
         }
     }
@@ -737,13 +741,14 @@ void Game::detectaOleada() {
 void Game::paso() {
     if (modo==0){
         close();
+        modo=-1;
         QMessageBox mens = QMessageBox();
         mens.setText("Game Over");
         mens.exec();
-        modo=100;
+
 
     }else{
-
+        zombiesPass+=1;
     }
 }
 
@@ -765,9 +770,6 @@ void Game::stats(Estudiantes stud) {
 
     vida->setText("Vida: "+QString::number(stud.getVid()));
     velocidad->setText("Velocidad: "+QString::number(stud.getVelocidad()));
-
-
-
 }
 
 
