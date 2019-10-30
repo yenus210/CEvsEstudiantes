@@ -720,17 +720,17 @@ void Game::detectaOleada() {
             case 6:
                 if (modo==0){
                     close();
-                    QMessageBox mens = QMessageBox();
-                    mens.setText("Game Over");
-                    mens.exec();
                     modo=-1;
-                }else{
+                    QMessageBox mens = QMessageBox();
+                    mens.setText("Victory Royale");
+                    mens.exec();
+
+                }else if (modo==1){
                     close();
-                    fcloseall();
+                    modo=-1;
                     QMessageBox mens = QMessageBox();
                     mens.setText("Se Graduaron: "+ QString::number(zombiesPass));
                     mens.exec();
-                    modo=-1;
                 }
         }
     }
@@ -747,7 +747,7 @@ void Game::paso() {
         mens.exec();
 
 
-    }else{
+    }else if(modo==1){
         zombiesPass+=1;
     }
 }
